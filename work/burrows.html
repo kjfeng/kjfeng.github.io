@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- work CSS -->
+    <link rel="stylesheet" href="work_detail.css">
+    <link rel="stylesheet" href="../mqueries.css">
+    <!-- roboto mono font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <!-- favicon -->
+    <link rel='icon' href='../favicon.png' type='image/x-icon'>
+
+    <title>Burrows-Wheeler - Kevin Feng</title>
+
+  </head>
+
+  <body>
+
+    <div class="row no-1">
+
+      <div class="col-xs-2 col-md-2">
+
+        <div id="home-sig-container">
+          <a href="../index.html">
+             <img class="initials" src="../initials.svg">
+            </a>
+        </div>
+
+        <div id="holy-trinity">
+          <p>Design +<br>Code +<br>HCI</p>
+        </div>
+      </div>
+
+      <div class="social">
+
+        <div class="col" style="text-align:right">
+
+          <p>
+            <a href="mailto:kevin.feng@live.ca" target="_blank">Email</a><br>
+            <a href="https://www.linkedin.com/in/kevin-kj-feng/" target="_blank">LinkedIn</a><br>
+            <a href="https://medium.com/@kjfeng" target="_blank">Medium</a><br>
+            <a href="https://are.na/kevin-feng" target="_blank">Are.na</a><br>
+            <a href="https://github.com/kjfeng" target="_blank">Github</a><br>
+            <a href="https://twitter.com/feng_kj" target="_blank">Twitter</a>
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row no-2">
+      <div class="col-xs-2 col-md-2">
+
+        <div id="nav-links">
+          <p>
+            <a href="../work.html" style="color: #636363">Work</a><br>
+            <a href="../readings.html">Readings</a><br>
+            <a href="https://medium.com/kevin-feng-blog" target="_blank">Blog</a><br>
+            <a href="k_feng_RESUME.pdf" target="_blank">Resume</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-8">
+        <div id="heading">
+          <h1>Burrows-Wheeler Data Compression</h1>
+        </div>
+        <div class="subheading">
+          <h1>Java<br>Spring 2018</h1>
+        </div>
+        <div class="writeup">
+
+          <h2>Overview</h2>
+          <p>The Burrows-Wheeler data compression algorithm forms the basis of Unix compression utility <a href="http://www.bzip.org/">bzip2</a>. It outcompresses gzip and PKZIP and is not protected by any patents. The algorithm comprises of three algorithmic components, which are applied in succession:</p>
+
+          <p><strong>Burrows–Wheeler transform:</strong> transform a typical English text file into a text file in which sequences of the same character occur near each other many times.</p>
+
+          <p><strong>Move-to-front encoding:</strong> converts a text file in which sequences of the same character occur near each other many times into a text file in which certain characters appear more frequently than others.</p>
+
+          <p><strong>Huffman compression:</strong> compress a text file in which certain characters appear more frequently than others by encoding frequently occurring characters with short codewords and infrequently occurring characters with long codewords.</p>
+
+          <h2>What's the Code About?</h2>
+          <p>For the final project in Algorithms and Data Structures, I implemented the Burrows-Wheeler data compression algorithm by using the Huffman algorithm provided by <i>Algorithms, 4th Edition</i> by Sedwick and Wayne and programming the move-to-front encoding/decoding and Burrows-Wheeler transform components. </p>
+
+          <p>To implement move-to-front encoding and decoding, I kept an ordered sequence of the 256 extended ASCII characters in an array. The sequence was intitialized by making the ith character in the sequence equal to the ith extended ASCII character. Next, each 8-bit character c was read from standard input one at a time. For encoding, the 8-bit index in the sequence where c appears was written to standard output, and c was moved to the front of the sequence. For decoding, the character read was casted to its 0-255 integer representation i. The ith character in the sequence was written to standard output and the character was then moved to the front.</p>
+
+          <p>Next, to implement the Burrows-Wheeler transform, I first created a circular suffix array that is an abstraction of a sorted array of n circular prefixes of a string of length n (the circular suffix array doesn’t actually store all n sorted prefixes to optimize performance). The circular suffix array data type (more specifically its ability to return the original index i of the ith sorted suffix) was then used in the transform() method of Burrows-Wheeler to write the correct characters to standard output. </p>
+
+          <p>The inverseTransform() method was a little trickier and more interesting to think about. If the jth original suffix (original string, shifted j characters to the left) is the ith row of the sorted suffixes, then next[i] is defined to be the row in the sorted order where the (j + 1)st original suffix appears. To invert the Burrows–Wheeler transform and recover the original input string, I created an array containing the all next[] values using key-indexed counting to sort the characters, and was able to write the original string using the next array and the sorted characters array produced as a by-product of key-indexed counting.</p>
+
+          <h2>Conclusion</h2>
+          <p>After running some timing tests and comparing the compression times and ratios of gzip and Burrows-Wheeler, I concluded that generally speaking, the encoding and decoding time in gzip is much faster but the compression ratio is inferior to Burrows-Wheeler on very small texts and very large texts. For anything in the middle, the compression ratio between the two algorithms are comparable.</p>
+
+          <p>This assignment makes use of standard libraries from the course. All code from this assignment is available on <a href="https://github.com/kjfeng/burrows-wheeler">Github</a>.</p>
+
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,109 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  float: left;
+  cursor: url('cursor.png'), auto;
+  color: transparent;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  position: relative;
+  letter-spacing: .01rem;
+}
+
+a {
+  color: #aeaeae;
+}
+
+a:hover {
+  cursor: url('cursor-hover.png'), auto;
+  color: #ffa500;
+  text-decoration: none;
+}
+
+:active {
+  cursor: url('cursor-onclick.png'), auto;
+}
+
+a:active {
+  cursor: url('cursor-onclick.png'), auto;
+}
+
+p {
+  color: #636363;
+}
+
+h2 {
+  color: #636363;
+  margin-bottom: 1rem;
+}
+
+.no-1 {
+  margin: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.no-2 {
+  margin: 1.5rem;
+  margin-top: 0;
+}
+
+.social {
+  position: absolute;
+  right: 1.5rem;
+}
+
+#home-sig-container {
+  width: 100%;
+  height: auto;
+  display: block;
+  float: left;
+}
+
+#home-sig-container a img {
+  height: 3rem;
+  width: auto;
+  margin-bottom: 2rem;
+}
+
+#nav-links {
+  padding-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+#heading {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  width: auto;
+}
+
+#heading h1 {
+  font-size: 4.2rem;
+  color: #9abcd6;
+}
+
+.preamble {
+  margin-bottom: 3.5rem;
+}
+
+.preamble, .content-area {
+  padding-left: 3px;
+}
+
+.preamble a, .content-area a {
+  color: #9abcd6;
+}
+
+.preamble a:hover, .content-area a:hover {
+  color: #ffa500;
+}
+
+.preamble p, .content-area p {
+  font-family: 'Roboto-Regular', sans-serif;
+  letter-spacing: .025rem;
+}
+
+.books, .articles {
+  margin-bottom: 3rem;
+}

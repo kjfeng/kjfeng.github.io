@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- work CSS -->
+    <link rel="stylesheet" href="work_detail.css">
+    <link rel="stylesheet" href="../mqueries.css">
+    <!-- roboto mono font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <!-- favicon -->
+    <link rel='icon' href='../favicon.png' type='image/x-icon'>
+
+    <title>Seam Carving - Kevin Feng</title>
+
+  </head>
+
+  <body>
+
+    <div class="row no-1">
+
+      <div class="col-xs-2 col-md-2">
+
+        <div id="home-sig-container">
+          <a href="../index.html">
+             <img class="initials" src="../initials.svg">
+            </a>
+        </div>
+
+        <div id="holy-trinity">
+          <p>Design +<br>Code +<br>HCI</p>
+        </div>
+      </div>
+
+      <div class="social">
+
+        <div class="col" style="text-align:right">
+
+          <p>
+            <a href="mailto:kevin.feng@live.ca" target="_blank">Email</a><br>
+            <a href="https://www.linkedin.com/in/kevin-kj-feng/" target="_blank">LinkedIn</a><br>
+            <a href="https://medium.com/@kjfeng" target="_blank">Medium</a><br>
+            <a href="https://are.na/kevin-feng" target="_blank">Are.na</a><br>
+            <a href="https://github.com/kjfeng" target="_blank">Github</a><br>
+            <a href="https://twitter.com/feng_kj" target="_blank">Twitter</a>
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row no-2">
+      <div class="col-xs-2 col-md-2">
+
+        <div id="nav-links">
+          <p>
+            <a href="../work.html" style="color: #636363">Work</a><br>
+            <a href="../readings.html">Readings</a><br>
+            <a href="https://medium.com/kevin-feng-blog" target="_blank">Blog</a><br>
+            <a href="k_feng_RESUME.pdf" target="_blank">Resume</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-8">
+        <div id="heading">
+          <h1>Seam Carving</h1>
+        </div>
+        <div class="subheading">
+          <h1>Java<br>Spring 2018</h1>
+        </div>
+        <div class="writeup">
+
+          <h2>Overview</h2>
+          <p>Seam carving is a content-aware image resizing technique where the image is reduced in size one vertical or horizontal “seam” of pixels at a time. A vertical seam in an image is a path of pixels connected from the top to the bottom with one pixel in each row; a horizontal seam is a path of pixels connected from the left to the right with one pixel in each column. Unlike standard content-agnostic resizing techniques (such as cropping and scaling), this content-aware technique does not distort the most interest features (aspect ratio, set of objects present, etc.) of the image. Seam carving is now a core feature in Adobe Photoshop and other computer graphics applications.</p>
+
+          <h2>What's the Code About?</h2>
+          <p>My partner and I created a data type that resizes a w-by-h image using the seam-carving technique for this assignment in our Data Structures and Algorithms class using these few steps:</p>
+
+          <p><strong>Energy calculation:</strong> we used the dual-gradient energy function to calculate the energy of a pixel, which is a measure of its importance—the higher the energy, the less likely that the pixel will be included as part of a seam. The energy of pixel (x,y) is defined as the square root of the sum of the squares of x and y gradients. The x-gradient is calculated by taking the square root of the sum of the squares of R, G, and B values of horizontally neighbouring pixels, while the y-gradient does the same with vertically neighbouring pixels. To handle pixels on the borders of the image, calculate energy by defining the leftmost and rightmost columns as adjacent and the topmost and bottommost rows as adjacent. Below is an example of energy calculations done on a 3-by-4 image, courtesy of the Princeton CS Department:</p>
+
+          <div class="row">
+            <div class="col"><img class="row-img" src="img/seam-energies.png"></div>
+          </div>
+
+          <p>Here’s a visualization of the energies on a test image using ShowEnergy.java (provided to us by course staff):</p>
+
+          <div class="row">
+            <div class="col"><img class="row-img" src="img/surfing-original.png"></div>
+            <div class="col"><img class="row-img" src="img/seam-white-energies.png"></div>
+          </div>
+
+          <p><strong>Seam identification:</strong> We used 3 2D arrays to model the picture as a digraph:</p>
+
+          <p>- distTo values (which are composed of the sum of one or more energy values which can then be used as “distances” in Dijkstra’s algorithm)<br>- xPrev (x-coordinate of the previous pixel analyzed), and<br>- energy values for every pixel.</p>
+
+          <p>We also created a private helper function to map indices from a 2D array to corresponding indices on a 1D array. We used an indexed Minimum Priority Queue (MinPQ) with those mapped indices as the PQ's indices and values in distTo as keys.</p>
+
+          <p>To start, we focused on finding horizontal seams only and initialized all the distTo values in the first row to energy values of the pixels in the first row. From there, we dequeued the smallest energy. If that pixel is in the bottom row, then we know we've found a seam so we’re done. Otherwise, we set the  left and right bounds for the x-value of the next layer of pixels to be examined, and enter a loop to analyze pixels within those bounds. If a pixel's new disTo is smaller than the previous distTo plus the energy of the new pixel, then the "path" in the digraph is shorter and its distTo and x-value will be updated, as per Dijkstra’s algorithm. We check whether the MinPQ already contains this pixel, update its distTo if it does and enqueue the new value if it doesn’t.</p>
+
+          <p>Once we are done (a pixel on the last row has been dequeued) we trace the seam from that pixel back up to the top and store the x-values in the seam path in an array using the xPrev values. Once the array is fully populated, the x-values of the entire seam is complete and in order, and the seam is returned.</p>
+
+          <p>To find a horizontal seam, we use a private helper method to transpose the picture, then find a vertical seam on that picture by calling findVerticalSeam(), and transpose the picture back so that the vertical seam becomes a corresponding horizontal seam</p>
+
+          <p>Seams below are visualized with ShowSeams.java (provided to us by course staff)</p>
+
+          <div class="row">
+            <div class="col"><img class="row-img" src="img/seam-horizontal-red.png"></div>
+            <div class="col"><img class="row-img" src="img/seam-vertical-red.png"></div>
+          </div>
+
+          <p><strong>Seam removal:</strong> To remove a seam, we once again consider vertical seams first and initialize a new Picture with a width one pixel less than the original. For all pixels left of the seam, we copy the original Picture exactly, but for pixels right of the seam, we set the jth pixel in any row of the new Picture equal to the (jth + 1) pixel in the original. The result is a resized picture without the seam’s pixels.</p>
+
+          <p>To remove a horizontal seam, we simply transpose the image, remove the vertical seam(s), and transpose the image back.</p>
+
+          <p>Below is a example of the test image alongside the same image with 150 vertical seams removed:</p>
+
+          <div class="row">
+            <div class="col"><img class="row-img" src="img/surfing-original.png"></div>
+            <div class="col"><img class="row-img-width-adj" src="img/surfing-150-removed.png"></div>
+          </div>
+
+          <p>This assignment makes use of standard libraries from the course. All code from this assignment is available on <a href="https://github.com/kjfeng/seam-carving">Github</a>.</p>
+
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>

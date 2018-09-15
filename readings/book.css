@@ -1,0 +1,115 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  float: left;
+  cursor: url('../cursor.png'), auto;
+  color: transparent;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  position: relative;
+  letter-spacing: .01rem;
+}
+
+a {
+  color: #aeaeae;
+}
+
+a:hover {
+  cursor: url('../cursor-hover.png'), auto;
+  color: #ffa500;
+  text-decoration: none;
+}
+
+:active {
+  cursor: url('../cursor-onclick.png'), auto;
+}
+
+a:active {
+  cursor: url('../cursor-onclick.png'), auto;
+}
+
+p {
+  color: #636363;
+  font-size: 1rem;
+}
+
+.no-1 {
+  margin: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.no-2 {
+  margin: 1.5rem;
+  margin-top: 0;
+}
+
+.social {
+  position: absolute;
+  right: 1.5rem;
+}
+
+#home-sig-container {
+  width: 100%;
+  height: auto;
+  display: block;
+  float: left;
+}
+
+#home-sig-container a img {
+  height: 3rem;
+  width: auto;
+  margin-bottom: 2rem;
+}
+
+#nav-links {
+  padding-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+#heading {
+  display: inline-flex;
+  width: auto;
+}
+
+#heading h1 {
+  font-size: 3rem;
+  color: #636363;
+}
+
+.subtitle h1 {
+  color: #aeaeae;
+  font-size: 1.5rem;
+  padding-left: 3px;
+}
+
+h2 {
+  color: #636363;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  padding-left: 3px;
+}
+
+.writeup p {
+  margin-top: 1rem;
+  font-family: 'Roboto-Regular', sans-serif;
+  letter-spacing: .025rem;
+  padding-left: 3px;
+}
+
+.amazon-link {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  padding-left: 3px;
+}
+
+.writeup a, .amazon-link a {
+  color: #9abcd6;
+}
+
+.writeup a:hover, .amazon-link a:hover{
+  color: #ffa500;
+}
