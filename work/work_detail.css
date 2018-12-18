@@ -116,6 +116,9 @@ p {
   width: 100%;
   margin-bottom: 2rem;
   margin-top: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .row-img-width-adj {
@@ -128,6 +131,18 @@ p {
   width: 50%;
   margin-bottom: 2rem;
   margin-top: 1rem;
+}
+
+figcaption {
+  font-style: italic;
+  font-family: 'Roboto';
+  color: #636363;
+  text-align: center;
+}
+
+ul {
+  font-family: 'Roboto';
+  color: #636363;
 }
 
 @media only screen and (max-width: 768px) {
