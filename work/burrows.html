@@ -97,7 +97,7 @@
           <p><strong>Huffman compression:</strong> compress a text file in which certain characters appear more frequently than others by encoding frequently occurring characters with short codewords and infrequently occurring characters with long codewords.</p>
 
           <h2>What's the Code About?</h2>
-          <p>For the final project in Algorithms and Data Structures, I implemented the Burrows-Wheeler data compression algorithm by using the Huffman algorithm provided by <i>Algorithms, 4th Edition</i> by Sedwick and Wayne and programming the move-to-front encoding/decoding and Burrows-Wheeler transform components. </p>
+          <p>For the final project in Algorithms and Data Structures, I implemented the Burrows-Wheeler data compression algorithm by using the Huffman algorithm provided by <i>Algorithms, 4th Edition</i> by Sedgewick and Wayne and programming the move-to-front encoding/decoding and Burrows-Wheeler transform components. </p>
 
           <p>To implement move-to-front encoding and decoding, I kept an ordered sequence of the 256 extended ASCII characters in an array. The sequence was intitialized by making the ith character in the sequence equal to the ith extended ASCII character. Next, each 8-bit character c was read from standard input one at a time. For encoding, the 8-bit index in the sequence where c appears was written to standard output, and c was moved to the front of the sequence. For decoding, the character read was casted to its 0-255 integer representation i. The ith character in the sequence was written to standard output and the character was then moved to the front.</p>
 
