@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126715006-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-126715006-1');
+</script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- work CSS -->
+    <link rel="stylesheet" href="work_detail.css">
+    <link rel="stylesheet" href="../mqueries.css">
+    <!-- roboto mono font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <!-- favicon -->
+    <link rel='icon' href='../favicon.png' type='image/x-icon'>
+
+    <title>Audioscape - Kevin Feng</title>
+
+  </head>
+
+  <body>
+
+    <div class="row no-1">
+
+      <div class="col-xs-2 col-md-2">
+
+        <div id="home-sig-container">
+          <a href="../index">
+             <img class="initials" src="../initials.svg">
+            </a>
+        </div>
+
+        <div id="holy-trinity">
+          <p>Design,<br>Code,<br>and HCI</p>
+        </div>
+      </div>
+
+      <div class="social">
+
+        <div class="col" style="text-align:right">
+
+          <p>
+            <a href="mailto:kevin.feng@live.ca" target="_blank">Email</a><br>
+            <a href="https://www.linkedin.com/in/kevin-kj-feng/" target="_blank">LinkedIn</a><br>
+            <a href="https://medium.com/@kjfeng" target="_blank">Medium</a><br>
+            <a href="https://are.na/kevin-feng" target="_blank">Are.na</a><br>
+            <a href="https://github.com/kjfeng" target="_blank">Github</a><br>
+            <a href="https://twitter.com/feng_kj" target="_blank">Twitter</a>
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row no-2">
+      <div class="col-xs-2 col-md-2">
+
+        <div id="nav-links">
+          <p>
+            <a href="../work" style="color: #636363">Work</a><br>
+            <a href="../readings">Readings</a><br>
+            <a href="https://medium.com/kevin-feng-blog" target="_blank">Blog</a><br>
+            <a href="/k_feng_RESUME.pdf" target="_blank">Resume</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-8">
+        <div id="heading">
+          <h1>Audioscape</h1>
+        </div>
+        <div class="subheading">
+          <h1>JavaScript (ThreeJS, Web Audio API), HTML + CSS<br>Spring 2019</h1>
+        </div>
+        <div class="writeup">
+
+          <h2>Introduction</h2>
+
+          <p>Procedural generation has been widely used in the fields of game design — developers use this technique to create landscapes and other repeating features like clothing and props. In games like Minecraft and Skyrim, procedural generation adds a new level of detail that allows game companies to retain users for years after release. </p>
+
+          <p>We’ve also seen substantial work with using audio parameters to render scenes. We wanted to be able to analyze any piece of music in our visualizer, not just a preset repertoire, so we took inspiration from <a href="https://codepen.io/prakhar625/pen/zddKRj">this audio visualizer</a>, which changes the shape of a sphere and the "ceiling" and "floor" planes.</p>
+
+          <p>We liked this audio visualizer, but we found that it doesn’t really allow you to explore the scene like we had envisioned. We wanted to be able to implement the procedurally generated scene, modify parameters within the scene, and explore it at the same time, which would combine both the audio visualization and the procedural generation aspects. We think that Audioscape will give a viewer a fun way to relax, listen, and watch a song play. </p>
+
+          <h2>Approach</h2>
+
+          <p>we used JavaScript, CSS, and HTML, along with the THREE.js framework for 3D graphics and Web Audio API for the audio analysis framework. We also started using a bit of the audio analysis functions from p5.js, but discarded it after realizing that it's only compatible with local audio files with a specified file path, not just any file a user uploads. </p>
+
+          <p>We first constructed the procedurally generated scene and then analyzing the feedback from the audio player. Then, we went through the different structures in the scene and modified the parameters according to the audio feedback. We believe this approach should work well for scenes that don’t have an exorbitant number of procedurally generated objects (this is because at every change in audio frequency, every vertex on each object needs to be updated). This should also work well for audio recordings that have large changes in frequency, and these large fluctuations will generate more interest within the scene.</p>
+
+          <h2>Scene Generation</h2>
+
+          <p>To generate each scene, we first created a large number of the basic structures that we needed to populate the scene (in the case of our first iteration of the city scene, we generated 10,000 boxes of size 1x1x1 with BoxGeometry from THREE.js, and then added them to the scene in a random position. Before adding them to the scene, we saved each box in an array so that we could re-access it at a later time for shape distortion after analyzing the audio. We used a Lambert Material (which uses Gouraud shading) for the buildings instead of a Phong Material despite Phong having better reflection capabilities because according to the THREE.js docs, Lambert is more efficient for large number of objects.  </p>
+
+          <p>We then further refined the city scene by adding streets and lamps. We defined some constants that dictated the number of blocks, width of each block, size of the lamps, etc. We then separately generated the city floor, sidewalks, buildings, and lamps, with each building being a randomly generated shade of gray. We then decided to generate the lamp lights separate from its pole and base so that we could alter the colour based on audio.</p>
+
+          <p>We followed a similar procedure in our nature scene—however, this time we created and modified cones instead of boxes in order to create an artistic rendering of trees. We also mapped a separate texture onto the cones to simulate leaves by randomly varying small squares of colors on the cones.</p>
+
+          <h2>Audio</h2>
+
+          <p>The homepage of our project allows the user to upload an audio file, which we analyze and play back, as well as using the byte frequency data to modify elements in the scene.</p>
+
+          <p>To analyze the audio, we used Javascript’s Web Audio API for frequency analysis and p5.js for amplitude analysis. By using getByteFrequencyData() from the Web Audio API, we were able to get a sorted array of frequencies. We split the array in two, defining the lower half as the base and upper half as the treble. This is a rough approximation of the true bass and treble of the audio, but it was accurate enough for our purposes and more importantly, it wasn’t as computationally expensive as more sophisticated analysis methods so that we could render large amounts of geometries with little lag. We then took the average of the frequencies in the top and bottom half and modulated them, and used these values to move vertices of objects and act as parameters in pseudo-random colour generation and alteration.</p>
+
+          <p>Something else we tried was dynamically modifying textures on the buildings in the scene along with the heights of buildings, but were warned by course staff that this be very time-expensive and decided it wasn’t reasonable to include in our scene.</p>
+
+          <h2>Camera and Controls</h2>
+
+          <p>We implemented first person controls in the scene because we wanted the user to be able to move around and explore the scene from many different angles. We thought this would give the user the sensation of flight, which would pair nicely with the fantasy world we are trying to create. To update the camera position in the scene, we call requestAnimationFrame() to update the camera, along with re-rendering the scene to update the building heights.</p>
+
+          <h2>Results</h2>
+
+          <p>Our final scenes appeared as follows. We created cityscapes at varying times of day, and a nature scene with trees, among others we experimented with.</p>
+
+          <div class="row">
+            <div class="col"><img class="row-img" src="img/as-1.png"></div>
+          </div>
+
+          <div class="row">
+            <div class="col"><img class="row-img" src="img/as-2.png"></div>
+          </div>
+
+          <div class="row">
+            <div class="col"><img class="row-img" src="img/as-3.png"></div>
+          </div>
+
+          <div class="row">
+            <div class="col"><img class="row-img" src="img/as-4.png"></div>
+          </div>
+
+          <div class="row">
+            <div class="col"><img class="row-img" src="img/as-5.png"></div>
+          </div>
+
+          <div class="row">
+            <div class="col"><img class="row-img" src="img/as-6.png"></div>
+          </div>
+
+          <h2>Conclusion</h2>
+
+          <p>Overall, we had fun with this project. It was an exciting way to not only become more familiar with more JS tools, but also thinking about how to code a dynamic scene that responds to input in real time. </p>
+
+          <p>We asked our friends to play around with the program for feedback, and a common complaint was that the scenes are not perfectly smooth and sometimes do act laggy. Since then, we have refactored and optimized the code so that the lag is not very noticeable anymore. However, we can try and optimize even further to allow for dynamic texture alteration and more varied textures and reflection models within a scene (such as glass for building windows, or water in the nature scene). </p>
+
+          <p>One of the major challenges (and limitations) we ran into was figuring out how to modify textures and colours after the scene has been rendered, so more research into such techniques would help us generate more fluid and exciting scenes. </p>
+
+          <p>This project can be found on <a href="https://github.com/kjfeng/audioscape">Github</a>. You can also view the demo <a href="https://audioscape-demo.github.io/audioscape/">here</a> </p>
+
+
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>
