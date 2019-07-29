@@ -113,13 +113,13 @@
 
           <p>The homepage of our project allows the user to upload an audio file, which we analyze and play back, as well as using the byte frequency data to modify elements in the scene.</p>
 
-          <p>To analyze the audio, we used Javascript’s Web Audio API for frequency analysis and p5.js for amplitude analysis. By using getByteFrequencyData() from the Web Audio API, we were able to get a sorted array of frequencies. We split the array in two, defining the lower half as the base and upper half as the treble. This is a rough approximation of the true bass and treble of the audio, but it was accurate enough for our purposes and more importantly, it wasn’t as computationally expensive as more sophisticated analysis methods so that we could render large amounts of geometries with little lag. We then took the average of the frequencies in the top and bottom half and modulated them, and used these values to move vertices of objects and act as parameters in pseudo-random colour generation and alteration.</p>
+          <p>To analyze the audio, we used Javascript’s Web Audio API for frequency analysis and p5.js for amplitude analysis. By using <tt>getByteFrequencyData()</tt> from the Web Audio API, we were able to get a sorted array of frequencies. We split the array in two, defining the lower half as the base and upper half as the treble. This is a rough approximation of the true bass and treble of the audio, but it was accurate enough for our purposes and more importantly, it wasn’t as computationally expensive as more sophisticated analysis methods so that we could render large amounts of geometries with little lag. We then took the average of the frequencies in the top and bottom half and modulated them, and used these values to move vertices of objects and act as parameters in pseudo-random colour generation and alteration.</p>
 
           <p>Something else we tried was dynamically modifying textures on the buildings in the scene along with the heights of buildings, but were warned by course staff that this be very time-expensive and decided it wasn’t reasonable to include in our scene.</p>
 
           <h2>Camera and Controls</h2>
 
-          <p>We implemented first person controls in the scene because we wanted the user to be able to move around and explore the scene from many different angles. We thought this would give the user the sensation of flight, which would pair nicely with the fantasy world we are trying to create. To update the camera position in the scene, we call requestAnimationFrame() to update the camera, along with re-rendering the scene to update the building heights.</p>
+          <p>We implemented first person controls in the scene because we wanted the user to be able to move around and explore the scene from many different angles. We thought this would give the user the sensation of flight, which would pair nicely with the fantasy world we are trying to create. To update the camera position in the scene, we call <tt>requestAnimationFrame()</tt> to update the camera, along with re-rendering the scene to update the building heights.</p>
 
           <h2>Results</h2>
 
