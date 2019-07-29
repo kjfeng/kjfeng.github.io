@@ -90,8 +90,8 @@
           <h2>Overview</h2>
           <p>Seam carving is a content-aware image resizing technique where the image is reduced in size one vertical or horizontal “seam” of pixels at a time. A vertical seam in an image is a path of pixels connected from the top to the bottom with one pixel in each row; a horizontal seam is a path of pixels connected from the left to the right with one pixel in each column. Unlike standard content-agnostic resizing techniques (such as cropping and scaling), this content-aware technique does not distort the most interest features (aspect ratio, set of objects present, etc.) of the image. Seam carving is now a core feature in Adobe Photoshop and other computer graphics applications.</p>
 
-          <h2>What's the Code About?</h2>
-          <p>My partner and I created a data type that resizes a w-by-h image using the seam-carving technique for this assignment in our Algorithms and Data Structures class using these few steps:</p>
+          <h2>Approach</h2>
+          <p>My partner and I created a data type that resizes a w-by-h image using the seam-carving technique for our Algorithms and Data Structures class using these few steps:</p>
 
           <p><strong>Energy calculation:</strong> we used the dual-gradient energy function to calculate the energy of a pixel, which is a measure of its importance—the higher the energy, the less likely that the pixel will be included as part of a seam. The energy of pixel (x,y) is defined as the square root of the sum of the squares of x and y gradients. The x-gradient is calculated by taking the square root of the sum of the squares of R, G, and B values of horizontally neighbouring pixels, while the y-gradient does the same with vertically neighbouring pixels. To handle pixels on the borders of the image, calculate energy by defining the leftmost and rightmost columns as adjacent and the topmost and bottommost rows as adjacent. Below is an example of energy calculations done on a 3-by-4 image, courtesy of the Princeton CS Department:</p>
 
@@ -106,17 +106,15 @@
             <div class="col"><img class="row-img" src="img/seam-white-energies.png"></div>
           </div>
 
-          <p><strong>Seam identification:</strong> We used 3 2D arrays to model the picture as a digraph:</p>
+          <p><strong>Seam identification:</strong> We used 3 2D arrays with the following information to model the picture as a digraph:</p>
 
-          <p>- distTo values (which are composed of the sum of one or more energy values which can then be used as “distances” in Dijkstra’s algorithm)<br>- xPrev (x-coordinate of the previous pixel analyzed), and<br>- energy values for every pixel.</p>
+          <p>- sum of one or more energy values which can then be used as “distances” to determine the graphical importance of a pixel relative to its surrounding pixels <br>- x-coordinate of the previous pixel analyzed, and<br>- energy values for every pixel</p>
 
-          <p>We also created a private helper function to map indices from a 2D array to corresponding indices on a 1D array. We used an indexed Minimum Priority Queue (MinPQ) with those mapped indices as the PQ's indices and values in distTo as keys.</p>
+          <p>We also created a private helper function to map indices from a 2D array to corresponding indices on a 1D array so we can use an indexed Minimum Priority Queue (MinPQ) to work with pixels of the smallest energy distance.</p>
 
-          <p>To start, we focused on finding horizontal seams only and initialized all the distTo values in the first row to energy values of the pixels in the first row. From there, we dequeued the smallest energy. If that pixel is in the bottom row, then we know we've found a seam so we’re done. Otherwise, we set the  left and right bounds for the x-value of the next layer of pixels to be examined, and enter a loop to analyze pixels within those bounds. If a pixel's new disTo is smaller than the previous distTo plus the energy of the new pixel, then the "path" in the digraph is shorter and its distTo and x-value will be updated, as per Dijkstra’s algorithm. We check whether the MinPQ already contains this pixel, update its distTo if it does and enqueue the new value if it doesn’t.</p>
+          <p>To start, we focused on finding vertical seams. We kept dequeuing the pixel with the smallest energy values row by row until we reached the last row. When moving row-to-row, we used Dijkstra’s algorithm with the  energy “distances” to ensure we are carving a seam with both low-energy pixels and low energy distance between the pixels. Once we were done (the last row has been inspected) we traced the seam from the last pixel back up to the top using our digraph structure, storing the x-value of previous pixels as we go. Once we were back at the first row, the x-values of the entire seam is complete and in order, and the seam is returned.</p>
 
-          <p>Once we are done (a pixel on the last row has been dequeued) we trace the seam from that pixel back up to the top and store the x-values in the seam path in an array using the xPrev values. Once the array is fully populated, the x-values of the entire seam is complete and in order, and the seam is returned.</p>
-
-          <p>To find a horizontal seam, we use a private helper method to transpose the picture, then find a vertical seam on that picture by calling findVerticalSeam(), and transpose the picture back so that the vertical seam becomes a corresponding horizontal seam</p>
+          <p>To find a horizontal seam, we created a private helper method to transpose the picture, found a vertical seam on that picture, and transposed the picture back.</p>
 
           <p>Seams below are visualized with ShowSeams.java (a program provided to us by course staff)</p>
 
@@ -125,9 +123,9 @@
             <div class="col"><img class="row-img" src="img/seam-vertical-red.png"></div>
           </div>
 
-          <p><strong>Seam removal:</strong> To remove a seam, we once again consider vertical seams first and initialize a new Picture with a width one pixel less than the original. For all pixels left of the seam, we copy the original Picture exactly, but for pixels right of the seam, we set the jth pixel in any row of the new Picture equal to the (jth + 1) pixel in the original. The result is a resized picture without the seam’s pixels.</p>
+          <p><strong>Seam removal:</strong> To remove a seam, we once again consider vertical seams first and initialized a new picture with <tt>n</tt> less pixel columns than the original, where <tt>n</tt> is the number of seams to be removed. For all pixels left of a seam, we copied the original picture exactly, but for pixels right of the seam, we set the <tt>j</tt>th pixel in any row of the new picture equal to the (<tt>j</tt>th + <tt>n</tt>) pixel in the original. This bumps all pixels right of the seam <tt>n</tt> pixels to the left, effectively closing the seam.</p>
 
-          <p>To remove a horizontal seam, we simply transpose the image, remove the vertical seam(s), and transpose the image back.</p>
+          <p>To remove a horizontal seam, we simply transposed the image, removed the vertical seam(s), and transposed the image back.</p>
 
           <p>Below is a example of the test image alongside the same image with 150 vertical seams removed:</p>
 
