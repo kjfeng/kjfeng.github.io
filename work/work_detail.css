@@ -28,6 +28,10 @@ a:hover {
   text-decoration: none;
 }
 
+button {
+  background-color: transparent;
+}
+
 h1 a {
   color: #9abcd6;
   border-bottom-style: none;
