@@ -17,12 +17,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <!-- work CSS -->
+    <!-- main CSS -->
     <link rel="stylesheet" href="work_detail.css">
     <link rel="stylesheet" href="../mqueries.css">
-    <!-- roboto mono font -->
+
+    <script src="../script.js"></script>
+    <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!-- favicon -->
     <link rel='icon' href='../favicon.png' type='image/x-icon'>
 
@@ -32,75 +34,52 @@
 
   <body>
 
-    <div class="row no-1">
 
-      <div class="col-xs-2 col-md-2">
+      <div class="header-nav">
+        <div class="row">
+          <div class="col-md-12 col-lg-8" style="padding-left: 2rem;">
+            <h1><a href="/">Kevin Feng</a></h1>
+            <h6 style="font-style: italic; padding-bottom: 1rem">-- CS student, creative technologist</h6>
+          </div>
 
-        <div id="home-sig-container">
-          <a href="../index">
-             <img class="initials" src="../initials.svg">
-            </a>
-        </div>
-
-        <div id="holy-trinity">
-          <p>Design,<br>Code,<br>and HCI</p>
-        </div>
-      </div>
-
-      <div class="social">
-
-        <div class="col" style="text-align:right">
-
-          <p>
-            <a href="mailto:kevin.feng@live.ca" target="_blank">Email</a><br>
-            <a href="https://www.linkedin.com/in/kevin-kj-feng/" target="_blank">LinkedIn</a><br>
-            <a href="https://medium.com/@kjfeng" target="_blank">Medium</a><br>
-            <a href="https://are.na/kevin-feng" target="_blank">Are.na</a><br>
-            <a href="https://github.com/kjfeng" target="_blank">Github</a><br>
-            <a href="https://twitter.com/feng_kj" target="_blank">Twitter</a>
-          </p>
-
+          <div class="col-md-12 col-lg-4 nav-links" style="padding-left: 2rem;">
+            <h6>
+              <a href="/about">↳ About</a><br>
+              <a href="/readings">↳ Readings</a><br>
+              <a href="https://medium.com/kevin-feng-blog">↳ Blog</a><br>
+            </h6>
+            <h6 style="padding-top: 0.5rem;">
+              <a class="resume-link" href="../k_feng_RESUME.pdf" target="_blank">Resume</a>
+            </h6>
+          </div>
         </div>
       </div>
 
-    </div>
 
-    <div class="row no-2">
-      <div class="col-xs-2 col-md-2">
-
-        <div id="nav-links">
-          <p>
-            <a href="../work" style="color: #636363">Work</a><br>
-            <a href="../readings">Readings</a><br>
-            <a href="https://medium.com/kevin-feng-blog" target="_blank">Blog</a><br>
-            <a href="/k_feng_RESUME.pdf" target="_blank">Resume</a>
-          </p>
+        <div class="col-md-12 col-lg-8">
+          <h2>Interstellar Plaque</h2>
+          <h3>Illustrator, laser cutter<br>
+            Winter 2018
+          </h3>
         </div>
-      </div>
 
-      <div class="col-xs-12 col-md-8">
-        <div id="heading">
-          <h1>Interstellar Plaque</h1>
-        </div>
-        <div class="subheading">
-          <h1>Illustrator, laser cutter<br>Winter 2018</h1>
-        </div>
-        <div class="writeup">
 
-          <h2>Overview</h2>
+        <div class="col-md-12 col-lg-8 content">
+
+          <h4>Overview</h4>
           <p>The Pioneer plaques, designed by Carl Sagan and Frank Drake, are a pair of 6-by-9-inch gold-anodized aluminium plaques that were attached to the 1972 Pioneer 10 and 1973 Pioneer 11 spacecrafts, featuring a pictorial message. Since the Pioneer 10 and 11 were the first human-built objects to achieve escape velocity from the solar system, the message is meant for any extraterrestrial life that happens to intercept either spacecraft. The plaques are designed to provide information about the origin of the spacecraft, including appearance of the human species and location of the earth within the universe.</p>
 
           <div class="row">
             <div class="col">
-              <figure><img class="row-img" style="margin-bottom: 1rem; margin-top: 1.5rem; width: 75%" src="img/plaque-golden.jpg">
+              <figure><img class="row-img" style="margin-bottom: 0rem; margin-top: 1.5rem; width: 75%" src="img/plaque-golden.jpg">
                 <figcaption>The Pioneer plaque. Image courtesy of CollectSpace.</figcaption>
               </figure>
               </div>
           </div>
           <div class="row">
             <div class="col">
-              <figure><img class="row-img" style="margin-bottom: 1rem; width: 75%" src="img/pioneer10-attached.jpg">
-                <figcaption>Plaque attached to the Pioneer 10. Image courtesy of NASA.</figcaption>
+              <figure><img class="row-img" style="margin-bottom: 0rem; margin-top: 1.5rem; width: 75%" src="img/pioneer10-attached.jpg">
+                <figcaption style="padding-bottom: 1rem;">Plaque attached to the Pioneer 10. Image courtesy of NASA.</figcaption>
               </figure>
               </div>
           </div>
@@ -110,7 +89,7 @@
 
           <p>In my final project in VIS 217 — Graphic Design: Circulation, I redesigned the plaque in Illustrator and engraved the design onto a 6-by-9-inch piece of acrylic using a laser cutter.</p>
 
-          <h2>Laying Down the Assumptions</h2>
+          <h4>Laying Down the Assumptions</h4>
           <p>To make this redesign possible, I needed to first define a set of constraints to work with. These are the assumptions I’m making about whoever picks up this plaque. I wanted to challenge myself and try keeping these assumptions somewhat “realistic” (of course, the term “realistic” is hardly fitting for the behavior of interstellar species we have zero idea about, but I’m using it in a relative sense, so assuming they don’t use our Arabic number system is more realistic than assuming they do). Here’s a list of the assumptions I made for the plaque’s recipients:</p>
 
           <ul>
@@ -122,15 +101,15 @@
           </ul>
 
 
-          <h2>Preliminary Research and Calculations</h2>
+          <h4>Preliminary Research and Calculations</h4>
 
           <p>I started with some research into the Pioneer spacecrafts and found that their top speed is around 131 200 km/h. The closest galaxy to the Milky Way is the Canis Major Dwarf Galaxy, at 25 000 light years away (2.365 * 10^17 km). This means it takes approximately 204 547 000 years for the spacecraft to reach the galaxy at top speed. Even if there is some force out there that accelerates the spacecraft to the speed of light, the spacecraft will still take 50 000 years to make a round trip, and we can hardly say with certainty that humans will still be around to receive a return message. Given this, I think it’s reasonable to assume that the recipients of the plaque will be somewhere within the Milky Way.</p>
 
-          <h2>An Alternate Way of Depicting Our Location</h2>
+          <h4>An Alternate Way of Depicting Our Location</h4>
 
           <div class="row">
             <div class="col">
-              <figure><img class="row-img" style="margin-bottom: 1rem; width: 100%" src="img/pulsar-map.png">
+              <figure><img class="row-img" style="margin-bottom: 1rem; margin-top: 1rem; width: 100%" src="img/pulsar-map.png">
                 <figcaption>The pulsar map on the original plaque</figcaption>
               </figure>
               </div>
@@ -142,19 +121,19 @@
 
           <div class="row">
             <div class="col">
-              <figure><img class="row-img" style="margin-bottom: 1rem; width: 75%" src="img/milky-way.png">
+              <figure><img class="row-img" style="margin-bottom: 1rem; margin-top: 1rem; width: 75%" src="img/milky-way.png">
                 <figcaption>The redesigned location indicator, featuring a simplified Milky Way</figcaption>
               </figure>
               </div>
           </div>
 
-          <h2>The Hydrogen Hyperfine Transition Graphic</h2>
+          <h4>The Hydrogen Hyperfine Transition Graphic</h4>
 
           <p>The hydrogen transition diagram was one of the things I hoped to completely change in my redesign. The original graphic is supposed to represent the spin-flip transition of hydrogen, the most abundant element in the universe. When a hydrogen electron changes its spin direction and jumps from one energy level to another, the radiation emitted has a wavelength of 21.106 cm and a period of 0.7 ns. A small vertical line is placed underneath as a binary 1 to specify a unit of length and time.</p>
 
           <div class="row">
             <div class="col">
-              <figure><img class="row-img" style="margin-bottom: 1rem; width: 50%" src="img/hydrogen.png">
+              <figure><img class="row-img" style="margin-bottom: 1rem; margin-top: 1rem; width: 50%" src="img/hydrogen.png">
                 <figcaption>Hydrogen hyperfine transition graphic on the original plaque</figcaption>
               </figure>
               </div>
@@ -166,7 +145,7 @@
 
           <div class="row">
             <div class="col">
-              <figure><img class="row-img" style="margin-bottom: 1rem; width: 100%" src="img/hydrogen-drafts.jpg">
+              <figure><img class="row-img" style="margin-bottom: 0rem; margin-top: 1rem; width: 100%" src="img/hydrogen-drafts.jpg">
                 <figcaption>My initial attempts of redesigning the hydrogen graphic</figcaption>
               </figure>
               </div>
@@ -176,7 +155,7 @@
 
           <div class="row">
             <div class="col">
-              <figure><img class="row-img" style="margin-bottom: 1rem; width: 100%" src="img/light-speed.jpg">
+              <figure><img class="row-img" style="margin-bottom: 0rem; margin-top: 1rem; width: 100%" src="img/light-speed.jpg">
                 <figcaption>Attempting to show the speed of light graphically</figcaption>
               </figure>
               </div>
@@ -188,13 +167,13 @@
 
           <div class="row">
             <div class="col">
-              <figure><img class="row-img" style="margin-bottom: 1rem; width: 70%" src="img/hydrogen-spectrum.png">
+              <figure><img class="row-img" style="margin-bottom: 1rem; margin-top: 1rem; width: 70%" src="img/hydrogen-spectrum.png">
                 <figcaption>Redesigned hydrogen hyperfine transition diagram</figcaption>
               </figure>
               </div>
           </div>
 
-          <h2>Establishing a Sense of Direction</h2>
+          <h4>Establishing a Sense of Direction</h4>
 
           <p>One of the issues in the original plaque is that the tick marks representing binary can be read reasonably from left to right and right to left. Even for those who understand the concept of a base 2 number system, the visual experience reading the numbers from left to right is similar but gives a different meaning than reading from the opposite direction. Also, if the plaque was read upside down, the meaning can also get distorted.</p>
 
@@ -202,7 +181,7 @@
 
           <p>However, the binary can still be read from either horizontal direction, so I made the 1’s into triangles. With the triangle in place of vertical lines, reading from left to right is a totally different experience as reading from right to left. I also wanted to show that the further left one reads, the larger the values are, and the triangle, with its wider end to the left, is one way to show that. Now, the plaque has both a horizontal and vertical “correctness” and has a better chance of being read in the correct direction.</p>
 
-          <h2>Other Design Decisions</h2>
+          <h4>Other Design Decisions</h4>
 
           <p>My graphic design professor mentioned an interesting point about the arrow in the original plaque: the arrow graphic is an obvious sign of direction to us, but would it be as intuitive to the plaque’s recipients? As a result, I refrained from using any arrows in my redesign. To indicate that the spaceship came from Earth, I used a thin dashed line instead. I was hoping that a dashed line can represent a trail of some sort (maybe the extraterrestrials have seen trails of rocks or crumbs of space-bread) and is therefore a more universal way of representing a path.</p>
 
@@ -216,41 +195,41 @@
 
           <div class="row">
             <div class="col">
-              <figure><img class="row-img" style="margin-bottom: 1rem; width: 100%" src="img/layout-planning.jpg">
+              <figure><img class="row-img" style="margin-top: 1rem; width: 100%" src="img/layout-planning.jpg">
                 <figcaption>Sketches to find the best layout</figcaption>
               </figure>
               </div>
           </div>
           <div class="row">
             <div class="col">
-              <figure><img class="row-img" style="margin-bottom: 1rem; width: 100%" src="img/1st-draft.png">
+              <figure><img class="row-img" style="margin-top: 1rem; width: 100%" src="img/1st-draft.png">
                 <figcaption>The very first draft</figcaption>
               </figure>
               </div>
           </div>
           <div class="row">
             <div class="col">
-              <figure><img class="row-img" style="margin-bottom: 1rem; width: 100%" src="img/plaque-final.png">
+              <figure><img class="row-img" style="margin-top: 1rem; width: 100%" src="img/plaque-final.png">
                 <figcaption>A refined draft</figcaption>
               </figure>
               </div>
           </div>
           <div class="row">
             <div class="col">
-              <figure><img class="row-img" style="margin-bottom: 1rem; width: 100%" src="img/blue-laser.jpg">
+              <figure><img class="row-img" style="margin-top: 1rem; width: 100%" src="img/blue-laser.jpg">
                 <figcaption>A test cut using a thin, blue acrylic</figcaption>
               </figure>
               </div>
           </div>
           <div class="row">
             <div class="col">
-              <figure><img class="row-img" style="margin-bottom: 1rem; width: 100%" src="img/black-laser-final.jpg">
+              <figure><img class="row-img" style="margin-top: 1rem; width: 100%" src="img/black-laser-final.jpg">
                 <figcaption>The completed plaque</figcaption>
               </figure>
               </div>
           </div>
 
-          <h2>Conclusion</h2>
+          <h4>Conclusion</h4>
 
           <p>This is definitely one of my favourite design projects. Having to think about graphic design from a completely *alien* perspective really forced me to question the meaning behind I do and how I choose to efficiently organize information. It was also a great exercise for walking through the design process and working with a set of very special constraints. And once we take away the human intuition present in graphic design, very interesting questions can arise. How do we represent time graphically? How much meaning do we take for granted in the graphics we use every day? It was also fun applying my physics knowledge to this project and seeing both physics and design work in harmony to create this piece.</p>
 
@@ -260,9 +239,14 @@
 
           <p>Special thanks to David Reinfurt for creating this assignment, the StudioLab makerspace for the laser cutter, and for everyone in VIS 217 for valuable feedback during the critiques!</p>
 
+
+
         </div>
-      </div>
-    </div>
+
+
+      <button onclick="toTopFunction()" id="top-button" title="Go to top">
+        ↑<br><span class="top-text">Top</span>
+      </button>
 
 
   </body>

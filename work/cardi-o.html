@@ -17,12 +17,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <!-- work CSS -->
+    <!-- main CSS -->
     <link rel="stylesheet" href="work_detail.css">
     <link rel="stylesheet" href="../mqueries.css">
-    <!-- roboto mono font -->
+
+    <script src="../script.js"></script>
+    <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!-- favicon -->
     <link rel='icon' href='../favicon.png' type='image/x-icon'>
 
@@ -32,60 +34,37 @@
 
   <body>
 
-    <div class="row no-1">
 
-      <div class="col-xs-2 col-md-2">
+      <div class="header-nav">
+        <div class="row">
+          <div class="col-md-12 col-lg-8" style="padding-left: 2rem;">
+            <h1><a href="/">Kevin Feng</a></h1>
+            <h6 style="font-style: italic; padding-bottom: 1rem">-- CS student, creative technologist</h6>
+          </div>
 
-        <div id="home-sig-container">
-          <a href="../index">
-             <img class="initials" src="../initials.svg">
-            </a>
-        </div>
-
-        <div id="holy-trinity">
-          <p>Design,<br>Code,<br>and HCI</p>
-        </div>
-      </div>
-
-      <div class="social">
-
-        <div class="col" style="text-align:right">
-
-          <p>
-            <a href="mailto:kevin.feng@live.ca" target="_blank">Email</a><br>
-            <a href="https://www.linkedin.com/in/kevin-kj-feng/" target="_blank">LinkedIn</a><br>
-            <a href="https://medium.com/@kjfeng" target="_blank">Medium</a><br>
-            <a href="https://are.na/kevin-feng" target="_blank">Are.na</a><br>
-            <a href="https://github.com/kjfeng" target="_blank">Github</a><br>
-            <a href="https://twitter.com/feng_kj" target="_blank">Twitter</a>
-          </p>
-
+          <div class="col-md-12 col-lg-4 nav-links" style="padding-left: 2rem;">
+            <h6>
+              <a href="/about">↳ About</a><br>
+              <a href="/readings">↳ Readings</a><br>
+              <a href="https://medium.com/kevin-feng-blog">↳ Blog</a><br>
+            </h6>
+            <h6 style="padding-top: 0.5rem;">
+              <a class="resume-link" href="../k_feng_RESUME.pdf" target="_blank">Resume</a>
+            </h6>
+          </div>
         </div>
       </div>
 
-    </div>
 
-    <div class="row no-2">
-      <div class="col-xs-2 col-md-2">
+        <div class="col-md-12 col-lg-8">
+          <h2>cardi-o</h2>
+          <h3>After Affects, Illustrator, Photoshop <br>
+            Spring 2019
+          </h3>
+        </div>
 
-        <div id="nav-links">
-          <p>
-            <a href="../work" style="color: #636363">Work</a><br>
-            <a href="../readings">Readings</a><br>
-            <a href="https://medium.com/kevin-feng-blog" target="_blank">Blog</a><br>
-            <a href="/k_feng_RESUME.pdf" target="_blank">Resume</a>
-          </p>
-        </div>
-      </div>
 
-      <div class="col-xs-12 col-md-8">
-        <div id="heading">
-          <h1>cardi-o</h1>
-        </div>
-        <div class="subheading">
-          <h1>After Affects, Illustrator, Photoshop<br>Spring 2019</h1>
-        </div>
-        <div class="writeup">
+        <div class="col-md-12 col-lg-8 content">
 
           <iframe width="100%" height="500" src="https://youtube.com/embed/cJknF2pBvPs" frameborder="0"> </iframe> <br><br>
 
@@ -97,7 +76,7 @@
 
           <p>The Apple Watch, as Jony Ive describes it, is a definitively personal device that “connects with the wearer at an intimate level to both embrace individuality and inspire desire”. Silky Apple marketing aside, the Apple Watch to me is an exciting human-machine interface and a chance to seamlessly integrate bodily experience with hardware and software. There are many existing time interfaces for the watch, and all of them prompt the user to read the time but not necessarily experience it. I wanted to design an interface that uses the intimate qualities of the watch interactions and allows the user to experience time in a deeply personal way. I also posed to myself the additional challenge of doing this without any reference to convention time. The result is <strong>cardi-o</strong>.</p>
 
-          <h2>Ideation</h2>
+          <h4>Ideation</h4>
 
           <p>I chose to represent time with the heartbeat. With the Apple Watch’s heartbeat sensor on the surface of our bodies acting as the interface between our internal and sensory worlds, we can understand our presence in time through the lens of our bodily experience. I had two primary goals in mind for the cardi-o interface: to depict the heartbeat graphically as the main watchface and to have some sort of a review feature where the user can look back and see their heartbeat over time. To start, I sketched some early ideas on paper, exploring particle systems, concentric rings with a darting clock “hand”, and two revolving balls inspired by a game called <a href="https://www.duetgame.com/">Duet</a>. </p>
 
@@ -129,7 +108,8 @@
               </div>
           </div>
 
-          <h2>An Alternate View</h2>
+          <h4>An Alternate View</h4>
+
           <p>To address my goal of allowing the user to look back on their heartbeat history, I created a “graph view” where the current heart rate is plotted as a line graph, relative to past heart rates, and coloured according to speed. The user can navigate the graph by zooming in and out with the crown and by swiping/tapping. To accompany this continuous display of time, I added the ability to mark discrete moments in time by tapping the screen in the normal “clock” view and later viewing them in the graph view. The ring motif comes handy here to make a strong graphic connection across the two views.</p>
 
           <div class="row">
@@ -144,20 +124,22 @@
           <p>Existing mappings have already been established for scrolling the crown and zooming: the crown is used Apple Maps to zoom in and out. However, because the two views are quite different, it seemed too easy for the user to just move the crown slightly and change to the other view (they can even do it on accident). I was also planning to use the crown zoom to navigate the graph. To make the view switch more intentional, the user has to “force scroll” past a certain threshold (that’s two or more “scroll clicks” for those who’ve used an Apple Watch) in order to switch views.</p>
 
 
-          <h2>Future Work</h2>
+          <h4>Future Work</h4>
 
           <p>I think cardi-o’s graph view has the potential to circulate in a very interesting way: people can use the interface to record body-time experiences of important events, whether it be physical like a workout, or emotional such as a wedding. They can look back on how they felt in the moment(s), screenshot the graph, and share it if they wish. If I had more time, I would add a feature for the user to easily export the graph for sharing and/or personal use. The use cases are incredibly diverse, and the results are intimate, powerful, and unique. </p>
 
-          <h2>Conclusion</h2>
+          <h4>Conclusion</h4>
 
           <p>As an Android user and Material Design enthusiast, I was very grateful to have the chance to familiarize myself with Apple’s watchOS design guidelines and overall design philosophy. After hours of scouring through the Apple Human Interface Guidelines, I now have a much more attentive eye towards Apple’s software design techniques (and also hardware, but to a lesser extent). And of course, designing for non-traditional screen sizes is always a challenge, and experience working with such constraints will be useful to my future work.</p>
 
           <p>Special thanks for the students of VIS415 – Advanced Graphic Design, <a href="https://eric.young.li/">Eric Li</a>, and <a href="http://www.davidreinfurt.com/">David Reinfurt</a> for their valuable guidance and feedback throughout this project.</p>
 
-
         </div>
-      </div>
-    </div>
+
+
+      <button onclick="toTopFunction()" id="top-button" title="Go to top">
+        ↑<br><span class="top-text">Top</span>
+      </button>
 
 
   </body>

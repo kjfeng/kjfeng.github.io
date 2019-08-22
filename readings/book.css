@@ -1,22 +1,39 @@
 body, html {
   width: 100%;
-  height: 100%;
+  height: auto;
   text-align: left;
   float: left;
   cursor: url('../cursor.png'), auto;
-  color: transparent;
-  font-family: 'Roboto Mono', monospace;
+  color: white;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   position: relative;
   letter-spacing: .01rem;
+  padding: 3rem;
+
 }
 
 a {
   color: #aeaeae;
+  border-bottom: 0.15rem dotted;
+}
+
+p a, ul a {
+  color: #9abcd6;
 }
 
 a:hover {
   cursor: url('../cursor-hover.png'), auto;
+  color: #ffa500;
+  text-decoration: none;
+}
+
+h1 a {
+  color: #9abcd6;
+  border-bottom-style: none;
+}
+
+h1 a:hover {
   color: #ffa500;
   text-decoration: none;
 }
@@ -29,87 +46,86 @@ a:active {
   cursor: url('../cursor-onclick.png'), auto;
 }
 
-p {
-  color: #636363;
-  font-size: 1rem;
-}
-
-.no-1 {
-  margin: 1.5rem;
-  margin-top: 2rem;
-  margin-bottom: 0.25rem;
-}
-
-.no-2 {
-  margin: 1.5rem;
-  margin-top: 0;
-}
-
-.social {
-  position: absolute;
-  right: 1.5rem;
-}
-
-#home-sig-container {
-  width: 100%;
-  height: auto;
-  display: block;
-  float: left;
-}
-
-#home-sig-container a img {
-  height: 3rem;
-  width: auto;
-  margin-bottom: 2rem;
-}
-
-#nav-links {
-  padding-top: 1rem;
-  margin-bottom: 3rem;
-}
-
-#heading {
-  display: inline-flex;
-  width: auto;
-}
-
-#heading h1 {
-  font-size: 3rem;
-  color: #636363;
-}
-
-.subtitle h1 {
-  color: #aeaeae;
-  font-size: 1.5rem;
-  padding-left: 3px;
+h1 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #9abcd6;
+  font-family: 'Roboto Mono', monospace;
 }
 
 h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: italic;
   color: #636363;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-  padding-left: 3px;
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 1rem;
 }
 
-.writeup p {
-  margin-top: 1rem;
-  font-family: 'Roboto-Regular', sans-serif;
-  letter-spacing: .025rem;
-  padding-left: 3px;
+h3 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.1rem;
+  color: #aeaeae;
+  margin-bottom: 1rem;
 }
 
-.amazon-link {
-  margin-top: 1.5rem;
-  margin-bottom: 3rem;
-  padding-left: 3px;
+h4 {
+  color: #636363;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
 }
 
-.writeup a, .amazon-link a {
-  color: #9abcd6;
+h6 {
+  font-family: 'Roboto Mono', monospace;
+  color: #636363;
+  line-height: 1.75rem;
 }
 
-.writeup a:hover, .amazon-link a:hover{
+p, ul {
+  color: #636363;
+}
+
+.nav-links {
+  padding-top: 12px;
+}
+
+.nav-links a {
+  line-height: 2rem;
+}
+
+.intro {
+  margin-bottom: 7rem;
+}
+
+.header-nav{
+  margin-bottom: 2rem;
+}
+
+.content {
+  padding-left: 1rem;
+}
+
+#top-button {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  text-align: center;
+  line-height: 24px;
+  color: #636363;
+}
+
+#top-button:hover {
+  cursor: url('../cursor-hover.png'), auto;
   color: #ffa500;
+}
+
+.top-text {
+  font-size: 12px;
 }
