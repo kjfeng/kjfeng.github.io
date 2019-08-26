@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126715006-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-126715006-1');
+</script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- main CSS -->
+    <link rel="stylesheet" href="work_detail.css">
+    <link rel="stylesheet" href="../mqueries.css">
+
+    <script src="../script.js"></script>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- favicon -->
+    <link rel='icon' href='../favicon.png' type='image/x-icon'>
+
+    <title>Social Login Visualizer - Kevin Feng</title>
+
+  </head>
+
+  <body>
+
+
+      <div class="header-nav">
+        <div class="row">
+          <div class="col-md-12 col-lg-8" style="padding-left: 2rem;">
+            <h1><a href="/">Kevin Feng</a></h1>
+            <h6 style="font-style: italic; padding-bottom: 1rem">-- CS student, creative technologist</h6>
+          </div>
+
+          <div class="col-md-12 col-lg-4 nav-links" style="padding-left: 2rem;">
+            <h6>
+              <a href="/about">↳ About</a><br>
+              <a href="/readings">↳ Readings</a><br>
+              <a href="https://medium.com/kevin-feng-blog">↳ Blog</a><br>
+            </h6>
+            <h6 style="padding-top: 0.5rem;">
+              <a class="resume-link" href="../k_feng_RESUME.pdf" target="_blank">Resume</a>
+            </h6>
+          </div>
+        </div>
+      </div>
+
+
+        <div class="col-md-12 col-lg-8">
+          <h2>Social Login Visualizer</h2>
+          <h3>JavaScript<br>
+            Spring 2019
+          </h3>
+        </div>
+
+
+        <div class="col-md-12 col-lg-8 content">
+
+          <h4>Introduction</h4>
+
+          <p>Social logins are a form of single-sign on (SSO) for account-based digital services. Instead of creating a new account for a website, social logins allow users to use existing information from a social networking service to sign on instead, and an increasingly common practice on the web.</p>
+
+          <p>Today, many digital products feed off of user data to improve user experience by predicting a user's preferences. Data is also vital for many social networking companies to generate targeted ads to users, which in many cases is their primary source of revenue (often by a long shot, too). For example, according to <a href="https://investor.fb.com/investor-news/press-release-details/2019/Facebook-Reports-Fourth-Quarter-and-Full-Year-2018-Results/default.aspx" target="_blank">this press release from Facebook</a>, the company's ad revenue in 2018 was about $55.0 billion, while their total 2018 revenue was about $55.8 billion. That's right – 98.6% of Facebook's revenue is from ads! Social logins are a great way of harvesting user data since the login provider will have access to much of the user's information on the platform they log into.</p>
+
+          <p>As the internet becomes more intricately connected and social than before, we wanted to investigate how social logins are used and how certain login providers dominate login intrastructure. We believe that this is a fitting lens to look at path dependency and data privacy on the web. We were also interested in the centralization patterns of social logins on the Chinese web and how they might differ from the US, so we investigated social logins for some Chinese sites as well.</p>
+
+          <h4>Approach</h4>
+
+          <p>To understand how social logins are used and perceived by the average user, we started by creating a survey asking people which social logins they and why they use the ones they do. We sent out the survey to Princeton residential college email chains in April 2019. We also did a bit of A/B testing with the mockup we used in our survey. You can view the results <a href="https://docs.google.com/forms/d/15VhgthDoJDZ3kg1a_sVi_MQqG2IGBWgL6BGzvZHx0sI/edit#responses" target="_blank">here</a> and <a href="https://docs.google.com/forms/d/1c5vyQJxPEFXAe5r0sgFYok-TPuYNO5wyDYZV05h6BGE/edit#responses" target="_blank">here</a>.</p>
+
+          <p>We retrieved social login information from the 200 most popular websites in the United States as well as the 100 most popular websites in China (both ranked by traffic, according to <a href="https://www.alexa.com/topsites/countries" target="_blank">Alexa's top websites by country</a>). For US websites, we narrowed our login options to the six popular social login providers: Facebook, Google, Twitter, Yahoo, LinkedIn, and Amazon. For Chinese sites, we looked at 7 social login providers that are local to the Chinese internet ecosystem: WeChat, QQ, Baidu, Taobao, Douban, Renren, Weibo. We then designed a graph to display the data: each site and social login provider is a node and if a site offered a certain login, there would be an edge between the two nodes. We used Vis.js, a JavaScript data visualization framework, to build the interactive graphs.</p>
+
+          <p>You can check out the visualizer and more on our <a href="https://egr277.github.io/social-login-visualizer/" target="_blank">project site</a>, and read further details and conclusions on our <a href="https://drive.google.com/file/d/1akQoavwZH43IhqulhIuBVyxLRgHdrfm4/view?usp=sharing" target="_blank">full project report</a>.</p>
+
+          <p>This project was completed in collaoration with <a href="https://github.com/michael99man" target="_blank">Michael Man</a>. </p>
+
+        </div>
+
+
+      <button onclick="toTopFunction()" id="top-button" title="Go to top">
+        ↑<br><span class="top-text">Top</span>
+      </button>
+
+
+  </body>
+
+</html>
