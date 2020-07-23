@@ -164,3 +164,9 @@ figcaption {
 .top-text {
   font-size: 12px;
 }
+
+.video-container {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
