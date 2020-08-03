@@ -1,4 +1,28 @@
-filterSelection("all");
+var btnContainer = document.getElementById('filters');
+var btns = btnContainer.getElementsByClassName("filter-button");
+var filterLastClicked = null;
+
+document.addEventListener("DOMContentLoaded", function() {
+  // console.log(localStorage.getItem("filter"));
+  actives = document.getElementsByClassName("active");
+  for (var i = 0; i < actives.length; i++) {
+    actives[i].className.replace(" .active", "");
+  }
+
+  if (localStorage.getItem("filter") == null) {
+    localStorage.setItem("filter", "all");
+    document.getElementById("all").className += " active";
+    filterSelection("all");
+  }
+
+  else {
+    document.getElementById(localStorage.getItem("filter")).className += " active";
+    filterSelection(localStorage.getItem("filter"));
+  }
+
+});
+
+
 
 function filterSelection(c) {
   if (c == "all") c = "";
@@ -9,11 +33,11 @@ function filterSelection(c) {
       x[i].classList.add("show");
     }
   }
+  localStorage.setItem("filter", c);
 }
 
-var btnContainer = document.getElementById('filters');
-if (btnContainer == null) console.log("nope");
-var btns = btnContainer.getElementsByClassName("filter-button");
+// var btnContainer = document.getElementById('filters');
+// var btns = btnContainer.getElementsByClassName("filter-button");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
     var currentSelected = document.getElementsByClassName("active")[0];
