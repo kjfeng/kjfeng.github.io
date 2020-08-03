@@ -27,7 +27,11 @@ button {
   background-color: transparent;
 }
 
-#filter-button {
+button:focus {
+  outline:0;
+}
+
+.filter-button {
   border: none;
   outline: none;
   text-align: center;
@@ -37,19 +41,35 @@ button {
   font-family: 'Roboto Mono', monospace;
 }
 
-#filter-button:hover {
+.filter-button:hover {
   cursor: url('cursor-hover.png'), auto;
   color: #ffa500;
+}
+
+.active {
+  color: #636363;
+  border: none;
+  border-bottom: 0.15rem dotted;
+  outline: none;
 }
 
 .filter-container {
   /* padding-left: 0; */
 }
 
-.filters {
+#filters {
   margin-left: 0;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 }
+
+.work-block {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 
 h1 a {
   color: #9abcd6;

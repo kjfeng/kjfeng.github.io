@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="mqueries.css">
 
     <script src="script.js"></script>
+
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -63,20 +64,16 @@
 
       <div class="col-md-12 col-lg-6">
 
-        <div class="row filters">
-          <button onclick="" id="filter-button">All</button>
+        <div class="row" id="filters">
 
-          <button onclick="" id="filter-button">Code</button>
+          <button onclick="filterSelection('all')" class="filter-button active">All</button>
 
-          <button onclick="" id="filter-button">
-            <span class="filter-text">Design</span>
-          </button>
+          <button onclick="filterSelection('code')" class="filter-button">Code</button>
 
-          <!-- <div class="col-sm-3 filter-container"> -->
-            <button onclick="" id="filter-button">
-              <span class="filter-text">Misc</span>
-            </button>
-          <!-- </div> -->
+          <button onclick="filterSelection('design')" class="filter-button">Design</button>
+
+          <button onclick="filterSelection('misc')" class="filter-button">Misc</button>
+
         </div>
 
       </div>
@@ -85,7 +82,7 @@
       <div class="col-md-12 col-lg-10" id="work">
         <div class="work-wrapper">
 
-          <div class="work-block">
+          <div class="work-block code">
             <div class="thumbnail-wrapper">
               <a href="work/ar-blockbot"><img class="thumbnail" src="work/img/blockbot-thumbnail.png" alt=""></a>
             </div>
@@ -95,7 +92,7 @@
             </div>
           </div>
 
-          <div class="work-block">
+          <div class="work-block code">
             <div class="thumbnail-wrapper">
               <a href="work/dr-vr"><img class="thumbnail" src="work/img/vr-thumbnail.png" alt=""></a>
             </div>
@@ -105,7 +102,7 @@
             </div>
           </div>
 
-          <div class="work-block">
+          <div class="work-block design">
             <div class="thumbnail-wrapper">
               <a href="work/rehack"><img class="thumbnail" src="work/img/rehack-thumbnail.png" alt=""></a>
             </div>
@@ -115,7 +112,7 @@
             </div>
           </div>
 
-          <div class="work-block">
+          <div class="work-block code">
             <div class="thumbnail-wrapper">
               <a href="work/social-login-visualizer"><img class="thumbnail" src="work/img/social-logins-thumbnail.png" alt=""></a>
             </div>
@@ -125,7 +122,7 @@
             </div>
           </div>
 
-          <div class="work-block">
+          <div class="work-block code">
             <div class="thumbnail-wrapper">
               <a href="work/audioscape"><img class="thumbnail" src="work/img/as-thumbnail.png" alt=""></a>
             </div>
@@ -135,7 +132,7 @@
             </div>
           </div>
 
-          <div class="work-block">
+          <div class="work-block design">
             <div class="thumbnail-wrapper">
               <a href="work/cardi-o"><img class="thumbnail" src="work/img/cardio-thumbnail.png" alt=""></a>
             </div>
@@ -145,7 +142,7 @@
             </div>
           </div>
 
-          <div class="work-block">
+          <div class="work-block design">
             <div class="thumbnail">
               <a href="work/interstellar_plaque"><img class="thumbnail" src="work/img/interstellar-plaque-thumbnail.png" alt=""></a>
             </div>
@@ -155,7 +152,7 @@
             </div>
           </div>
 
-          <div class="work-block">
+          <div class="work-block design">
             <div class="thumbnail">
               <a href="work/venmo_case_study"><img class="thumbnail" src="work/img/venmo-thumbnail.png" alt=""></a>
             </div>
@@ -165,7 +162,7 @@
             </div>
           </div>
 
-          <div class="work-block">
+          <div class="work-block design">
             <div class="thumbnail">
               <a href="/work/materialize"><img class="thumbnail" src="work/img/material.png" alt=""></a>
             </div>
@@ -175,7 +172,7 @@
             </div>
           </div>
 
-          <div class="work-block">
+          <!-- <div class="work-block">
             <div class="thumbnail">
               <a href="/work/burrows"><img class="thumbnail" src="work/img/burrows.png" alt=""></a>
             </div>
@@ -193,7 +190,7 @@
               <h3><a href="work/seam_carving">Seam Carving →</a></h3>
               <p>Implementing a content aware image resizing algorithm. </p>
             </div>
-          </div>
+          </div> -->
 
         </div>
 
@@ -205,5 +202,6 @@
 
 
   </body>
+  <script src="main.js"></script>
 
 </html>
