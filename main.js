@@ -1,6 +1,5 @@
 var btnContainer = document.getElementById('filters');
 var btns = btnContainer.getElementsByClassName("filter-button");
-var filterLastClicked = null;
 
 document.addEventListener("DOMContentLoaded", function() {
   // console.log(localStorage.getItem("filter"));
@@ -25,7 +24,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function filterSelection(c) {
-  if (c == "all") c = "";
+  if (c == "all") {
+    localStorage.setItem("filter", "all");
+    c = "";
+  }
+  else {
+    localStorage.setItem("filter", c);
+  }
   var x = document.getElementsByClassName("work-block");
   for (var i = 0; i < x.length; i++) {
     x[i].classList.remove("show");
@@ -33,7 +38,7 @@ function filterSelection(c) {
       x[i].classList.add("show");
     }
   }
-  localStorage.setItem("filter", c);
+
 }
 
 // var btnContainer = document.getElementById('filters');
