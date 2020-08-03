@@ -27,6 +27,30 @@ button {
   background-color: transparent;
 }
 
+#filter-button {
+  border: none;
+  outline: none;
+  text-align: center;
+  margin-right: 3rem;
+  padding-left: 0;
+  color: #aeaeae;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#filter-button:hover {
+  cursor: url('cursor-hover.png'), auto;
+  color: #ffa500;
+}
+
+.filter-container {
+  /* padding-left: 0; */
+}
+
+.filters {
+  margin-left: 0;
+  margin-bottom: 1rem;
+}
+
 h1 a {
   color: #9abcd6;
   border-bottom-style: none;
