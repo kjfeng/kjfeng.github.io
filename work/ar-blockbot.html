@@ -66,11 +66,112 @@
 
         <div class="col-md-12 col-lg-8 content">
 
-          <p>Documentation coming soon! In the meantime, enjoy the snippet below for a quick peek of what's coming.</p>
+          <h4>Introduction</h4>
+
+          <p>Robotics education often requires lots of hardware. Although the hardware provides crucial hands-on experience and knowledge, it can also make robotics less accessible. Schools that do not have the resources to purchase, maintain, and store necessary hardware may have a hard time exposing students to robotics through means such as starting a robotics club. Students who do not have easy access to hardware, such as those who live further away from where the hardware is, may have less opportunity to contribute to robotics projects. And of course, if special circumstances such as COVID-19 prevents in-person collaboration, robotics education may not even be possible.</p>
+
+          <p>Additionally, reducing the need to constantly work with hardware can sometimes improve workflow as well as make learning more convenient. Hardware setup and debugging is often strenuous, so if someone has an idea for a maneuver they want to test out quickly, they may have many hardware hurdles before they can start testing. When showing a new club member the ropes to robotics, it may be more helpful for the new member to first experiment with how to programmatically make a robot move without getting into the weeds of the hardware.</p>
+
+          <p>There are currently a very limited number of platforms, such as <a href="https://vr.vex.com/">VEXcode VR</a>, that allow students to learn the basics of programming and robotics without a physical robot. However, all of these platforms are based inside an artificial world. We wanted to build something that allowed a virtual robot to interact with the real world for a more accurate and delightful experience. We thought augmented reality (AR) was the perfect solution to this – the robot could be placed on a real-world surface, bump into walls, and fall off tables. We present ARBlockbot, an educational robotics and programming app for iOS and Android phones + tablets targeted towards middle and high school students. </p>
+
+          <h4>Demos</h4>
+
+          <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 video-container">
+            <div style="padding:206.34% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/427620719" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
 
           <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 video-container">
             <div style="padding:206.34% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/427623490" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
           </div>
+
+          <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 video-container">
+            <div style="padding:206.34% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/444809523" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+
+          <h4>Approach</h4>
+
+          <p>We took inspiration from Google's <a href="https://developers.google.com/blockly">Blockly</a> block-coding library to abstract code into visual blocks that snap together to form a program. Since we used Unity, C#, and ARFoundation for the project and Blockly is built for Javascript, we rebuilt the main Blockly functionalities in C# for use in Unity. In the process, we engineered a pipeline for efficient creation of these blocks upon a user's request and linked them to real code. We then linked the real code to a 3D model of a remote-control buggy (courtesy of <a href="https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647">SteamVR</a>) to control the rotation of the 4 wheels individually. This allowed us to move and turn the buggy on a plane detected in the real world. We used the default ARFoundation tools for plane detection.</p>
+
+          <p>The diagram below gives an overview of the architecture of our coding blocks system.</p>
+
+          <div class="row">
+            <figure><div class="col"><img class="row-img" src="img/arbb-0.png"></div></figure>
+          </div>
+
+          <h4>The User Interface</h4>
+
+          <p>My work was primarily focused on connecting our backend with our frontend and designing and building the UI itself. This was an interesting challenge and design exercise because there were so many selection options to pack into such a small screen area (at least for mobile). The blocks must be displayed in a clear way, well organized, and easy to access as users will be interacting with blocks in great detail very frequently.</p>
+
+          <p>The first version of our UI was based on a slidout panel structure. It was purely utilitarian and a quick solution for us to start testing the block interactions, without much aesthetic consideration. A fixed sidebar with block categories leads to a secondary panel that slides out with block options when a category is tapped on.</p>
+
+          <p>Although this design was meant to accomodate both portrait and landscape modes on mobile, it wasn't really good for either. In portrait mode, it was not a good use of screen space: the sliding a panel out in the direction of the phone's width made the already narrow coding canvas even narrower. The slideout panel was also too narrow to see block details. Landscape mode was slightly better, but the length of the phone made interactions cumbersome for those with smaller hands, espcially as the code got longer. Since our target users were middle and highs school students who may not have the largest hands, this was not ideal. Besides, everything was just too small.</p>
+
+          <div class="row" style="padding-top: 2rem;">
+            <figure><div class="col"><img class="row-img" src="img/arbb-1.png"></div>
+              <figcaption> A rather provisionary v1 of the UI</figcaption>
+            </figure>
+          </div>
+
+          <p>In our second iteration, we completely redesigned the interface. We locked it to a vertical orientation for consistency and ease of one-handed use for smaller hands. The goal of this new design was to maintain all functionalities while maximizing screen real estate and increasing both speed and intuitiveness of use.</p>
+
+          <p>We did this by using sliding panels and menus to only display the essential elements on-screen while keeping the rest hidden off-screen but still easily accessible.  Collapsable horizontally scrolling menus for the block categories and block options allowed us to display our many selections in a larger and clearer way. Irrelevant options are easily hidden, but can be reached with a quick flick to the left or right. When not needed, the entire coding canvas and menus slides down and away from view, turning into a translucent handle at the bottom of the screen to allow for more visibility when viewing the environment. To access the canvas and menu again, the user simply swipes up, a gesture that should already be familiar due to mobile swipe-up app drawers and quick access menus. Overall, the interface is simpler, less obstrusive, and more intuitive.</p>
+
+          <div class="row" style="padding-top: 2rem;">
+            <figure><div class="col"><img class="row-img" src="img/arbb-2.png"></div>
+              <figcaption>Formative planning sketches</figcaption>
+            </figure>
+          </div>
+
+          <div class="row" style="padding-top: 2rem;">
+            <div class="col"><img class="row-img" src="img/arbb-3.png"></div>
+            <div class="col"><img class="row-img" src="img/arbb-4.png"></div>
+            <div class="col"><img class="row-img" src="img/arbb-5.png"></div>
+          </div>
+          <p style="text-align: center"><i>Planning wireframes</i></p>
+
+          <div class="row" style="padding-top: 2rem;">
+            <div class="col"><img class="row-img" src="img/arbb-6.gif"></div>
+            <div class="col"><img class="row-img" src="img/arbb-7.gif"></div>
+            <div class="col"><img class="row-img" src="img/arbb-8.gif"></div>
+          </div>
+          <p style="text-align: center"><i>UI in action</i></p>
+
+          <p>A common question was why we chose to have both a "run" and "pause" button. We actually planned to have one button for both pause and run, like many modern UIs, until we realized that the "run" button can mean two things: run the code from the top, as well as continue running the code where it was paused. To account for this, we added a pause button to differentiate the second case.</p>
+
+          <p>We user tested the new UI with the old one with 5 users with age range spanning from 15 to 50s, and as indicated by the results below, the new UI was the clear winner.</p>
+
+          <div class="row">
+            <div class="col"><img class="row-img" src="img/arbb-ut.png"></div>
+          </div>
+
+
+          <h4>Challenges</h4>
+
+          <p>We were in the beginning stages of this project in March 2020 when we all had to rush to return home from study abroad in Singapore due to COVID-19. We were very glad that we managed to pull this together despite the turbulent semester and working remotely across different time zones.</p>
+
+          <p>Our biggest technical challenge by far was figuring out how to get the Blockly library working in Unity and C#. Blockly was built for Javascript and the web, and the very few Github repos we found that attempted to adapt it for Unity were out of date and did not work. We ended up manually translating some of the behind-the-hood Javascript of Blockly into C# and derived our own pipeline to create code-supported visual blocks.</p>
+
+          <p> At first, we wrote a program to manually create blocks per user request, which worked fine during our initial testing, but was too inefficient and limiting to be scalable. We then built a system of programs where a <tt>BlockFactory</tt> created blocks from a <tt>BlockLibrary</tt> and imported graphical components from <tt>BlockEssentials</tt>. The diagram below shows our evolution in process.</p>
+
+          <div class="row">
+            <div class="col"><img class="row-img" src="img/arbb-9.png"></div>
+          </div>
+
+          <p>Besides that, we had some initial trouble using code to control the robot's wheels, but managed to resolve it thanks to some of SteamVR's locomotion functions.</p>
+
+          <h4>Future Work and Conclusion</h4>
+
+          <p>This project was completed in less than 2 months, and there were many reach features that we wanted to implement but didn't get a chance to.</p>
+
+          <p>For starters, we want to clean up the look and presentation of the blocks. The graphical components used in <tt>BlockEssentials</tt> could use some refinement and the forms could fit better in the UI's selection menu.</p>
+
+          <p>We also wanted to incorporate multiple types of robots. The remote controlled car is perhaps the most basic, with the ability to move and turn on a detected plane. Some other ideas we had included drone robots that could be flown in the air and boat robots that could be operated in detected areas of water. Each robot may have its own specific functions and code blocks. </p>
+
+          <p>Lastly, for a more enhanced classroom experience, a multiplayer mode could be added so students can join AR "rooms" with their phones and complete tasks/competitions with their robots together.</p>
+
+          <p>Overall, we were glad we put this together and learned so much about AR and Unity from this experience. We are very excited for the future of AR and its ability to augment mobile experiences.</p>
+
+          <p>This project was done in collaboration with <a href="https://github.com/AnjaliDewdrop">Anjali Thatte</a>, <a href="https://github.com/annetheblobby">Anne Liu</a>, and <a href="https://github.com/Daniel-Martin576">Daniel Martin</a>. You can find the Github repo <a href="https://github.com/Daniel-Martin576/ARBlockbot">here</a>.</p>
 
 
         </div>
