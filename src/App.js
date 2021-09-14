@@ -14,6 +14,8 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 function App() {
   return (
+
+    <BrowserRouter basemname={`/${process.env.PUBLIC_URL}`}>
     <div className="App">
 
 
@@ -42,7 +44,7 @@ function App() {
       </Row>
 
 
-      <BrowserRouter>
+
         <div className="nav-wrapper">
           <NavLink to="/" exact={true} className="navigator">Latest</NavLink>
           <NavLink to="/publications" className="navigator">Publications</NavLink>
@@ -57,32 +59,7 @@ function App() {
           <Route path="/misc" component={Misc}/>
         </div>
 
-      </BrowserRouter>
 
-      {/*<div className="header-nav">
-        <div className="row">
-          <div className="col-md-12 col-lg-8" style={{paddingLeft: "2rem"}}>
-            <h1><a href="/">Kevin Feng</a></h1>
-            <h6 style={{fontStyle: "italic", paddingBottom: "1rem"}}>-- CS student, creative technologist</h6>
-          </div>
-
-          <div className="col-md-12 col-lg-4 nav-links" style={{paddingLeft: "2rem"}}>
-            <h6>
-              <a href="/about">↳ About</a><br/>
-              <a href="/readings">↳ Readings</a><br/>
-              <a href="https://medium.com/kevin-feng-blog">↳ Blog</a><br/>
-            </h6>
-            <h6 style={{paddingTop: "0.5rem"}}>
-              <a className="resume-link" href="k_feng_RESUME.pdf" target="_blank">Resume</a>
-            </h6>
-          </div>
-        </div>
-      </div>*/}
-
-
-      {/*<div className="col-md-12 col-lg-6 intro">
-        <p>I'm a student at Princeton University thinking about technological interfaces and different ways people can interact with them to arrive at new conclusions. I aspire to use code, design, data, and new ideas to make people's communities at least marginally nicer to be in.</p>
-      </div>*/}
 
       </Col>
 
@@ -90,6 +67,7 @@ function App() {
 
 
     </div>
+    </BrowserRouter>
   );
 }
 
