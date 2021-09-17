@@ -21,6 +21,14 @@ h1, h1 a {
   font-family: 'Roboto Mono', monospace;
 }
 
+h2 {
+  font-size: 48px !important;
+}
+
+h3 {
+  font-size: 32px !important;
+}
+
 p {
   color: #333;
 }
@@ -70,8 +78,16 @@ button:focus {
   color: #333;
 }
 
+/* .showcase-wrapper {
+  display: flex;
+  flex-direction: column;
+} */
+
 .showcase {
   width: 20rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  
 }
 
 .showcase:hover {
@@ -215,4 +231,11 @@ h6 {
 
 .top-text {
   font-size: 12px;
+}
+
+@media only screen and (max-width: 560px) {
+  .showcase {
+    width: 100%;
+    margin-right: 0
+  }
 }

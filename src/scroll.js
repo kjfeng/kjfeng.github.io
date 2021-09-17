@@ -5,7 +5,7 @@ window.onscroll = function() {
 };
 
 function scrollTrigger() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
     document.getElementById("top-button").style.display = "block";
   }
   else {

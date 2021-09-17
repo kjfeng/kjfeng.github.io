@@ -2,14 +2,16 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle, faFileAlt, faCode, faWindowRestore, faPlay, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { Route, Link, BrowserRouter, useRouteMatch } from "react-router-dom";
 
 function Showcase(props) {
+
   return (
     <div className="">
       <Card className="showcase">
-        <a href="#">
+        <Link to={`/projects/${props.urlext}`}>
           <Card.Img variant="top" src={props.thumbnail} />
-        </a>
+        </Link>
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
           <Card.Text>
@@ -18,7 +20,7 @@ function Showcase(props) {
           </Card.Text>
           <div className="showcase-info">
 
-            {props.details ? <a href={props.details} className="showcase-link"><FontAwesomeIcon icon={faInfoCircle} /> Details</a> : null}
+            {props.urlext ? <Link to={`/projects/${props.urlext}`} className="showcase-link"><FontAwesomeIcon icon={faInfoCircle} /> Details</Link> : null}
 
             {props.paper ? <a href={props.paper} className="showcase-link"><FontAwesomeIcon icon={faFileAlt} /> Paper</a> : null}
 
