@@ -27,6 +27,11 @@ h2 {
 
 h3 {
   font-size: 32px !important;
+  margin-top: 2rem !important;
+}
+
+h5 {
+  font-size: 24px !important;
 }
 
 p {
@@ -59,6 +64,16 @@ button:focus {
   outline:0;
 }
 
+.links-wrapper img {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.bio-wrapper {
+  padding-bottom: 1rem;
+  max-width: 800px !important;
+}
+
 .navigator {
   margin-right: 3rem;
   color: #888;
@@ -78,16 +93,15 @@ button:focus {
   color: #333;
 }
 
-/* .showcase-wrapper {
+.showcase-wrapper {
   display: flex;
-  flex-direction: column;
-} */
+  flex-flow: row wrap;
+}
 
 .showcase {
   width: 20rem;
   margin-right: 1rem;
-  margin-bottom: 1rem;
-  
+  margin-bottom: 1rem !important;
 }
 
 .showcase:hover {
@@ -95,7 +109,8 @@ button:focus {
 }
 
 .showcase-info {
-  margin-top: 2rem;
+  bottom: 1rem;
+  position: absolute;
 }
 
 .active {
@@ -104,7 +119,12 @@ button:focus {
 }
 
 .venue-info {
-  margin: .5rem 0 1rem 0;
+  margin: .5rem 0 5rem 0;
+  font-style: italic;
+}
+
+.venue-page {
+  margin-bottom: 1rem;
   font-style: italic;
 }
 
@@ -117,9 +137,57 @@ button:focus {
   white-space: nowrap;
 }
 
-.card {
-  border-radius: 0 !important;
+.card-group {
+  border-left: 100 !important;
 }
+
+.authorpile {
+  margin-top: 2rem !important;
+  margin-bottom: 0.5rem;
+}
+
+.author-block {
+  margin: 1rem 0 1rem 0;
+}
+
+.circle-pic {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  /* background-image: url('./assets/img/people/kjfeng.png'); */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display:inline-block;
+  vertical-align:middle;
+  margin-right: 1rem;
+}
+
+.author-name {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.video-container {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+/* .card-group > .card {
+
+  border-left: 1 !important;
+
+  + .card {
+    border-right: 1 !important;
+  }
+
+  &:first-child {
+    border-right: 0 !important;
+  }
+
+} */
+
 
 /* #filters {
   margin-left: 0;
@@ -233,9 +301,14 @@ h6 {
   font-size: 12px;
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 576px) {
   .showcase {
     width: 100%;
     margin-right: 0
   }
+
+  /* .circle-pic {
+    width: 60px;
+    height: 60px;
+  } */
 }

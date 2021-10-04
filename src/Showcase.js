@@ -1,13 +1,13 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInfoCircle, faFileAlt, faCode, faWindowRestore, faPlay, faVideo } from '@fortawesome/free-solid-svg-icons';
-import { Route, Link, BrowserRouter, useRouteMatch } from "react-router-dom";
+import { faInfoCircle, faFileAlt, faCode, faWindowRestore, faPlay, faVideo, faWindowMaximize } from '@fortawesome/free-solid-svg-icons';
+import { Route, Link, BrowserRouter } from "react-router-dom";
 
 function Showcase(props) {
 
   return (
-    <div className="">
+
       <Card className="showcase">
         <Link to={`/projects/${props.urlext}`}>
           <Card.Img variant="top" src={props.thumbnail} />
@@ -18,9 +18,10 @@ function Showcase(props) {
             {props.subtitle}
             <div className="venue-info">{props.venue}</div>
           </Card.Text>
+
           <div className="showcase-info">
 
-            {props.urlext ? <Link to={`/projects/${props.urlext}`} className="showcase-link"><FontAwesomeIcon icon={faInfoCircle} /> Details</Link> : null}
+            {props.urlext ? <Link to={`/projects/${props.urlext}`} className="showcase-link"><FontAwesomeIcon icon={faInfoCircle} /> Info</Link> : null}
 
             {props.paper ? <a href={props.paper} className="showcase-link"><FontAwesomeIcon icon={faFileAlt} /> Paper</a> : null}
 
@@ -32,34 +33,15 @@ function Showcase(props) {
 
             {props.video ? <a href={props.video} className="showcase-link"><FontAwesomeIcon icon={faVideo} /> Video</a> : null}
 
-            {/*<a href={props.details} className="showcase-link"><FontAwesomeIcon icon={faInfoCircle} /> Details</a>
-            <a href={props.paper} className="showcase-link"><FontAwesomeIcon icon={faFileAlt} /> Paper</a>
-            <a href={props.code} className="showcase-link"><FontAwesomeIcon icon={faCode} /> Code</a>
-            <a href={props.slides} className="showcase-link"><FontAwesomeIcon icon={faWindowRestore} /> Slides</a>
-            <a href={props.demo} className="showcase-link"><FontAwesomeIcon icon={faPlay} /> Demo</a>*/}
+            {props.poster ? <a href={props.poster} className="showcase-link"><FontAwesomeIcon icon={faWindowMaximize} /> Poster</a> : null}
+
           </div>
 
-
-
-          {/*<Card.Link className="showcase-link" href="#">
-            <FontAwesomeIcon icon={faInfoCircle} /> Details
-          </Card.Link>
-          <Card.Link className="showcase-link" href="#">
-            <FontAwesomeIcon icon={faFileAlt} /> Paper
-          </Card.Link>
-          <Card.Link className="showcase-link" href="#">
-            <FontAwesomeIcon icon={faCode} /> Code
-          </Card.Link>
-          <Card.Link className="showcase-link" href="#">
-            <FontAwesomeIcon icon={faWindowRestore} /> Slides
-          </Card.Link>
-          <Card.Link className="showcase-link" href="#">
-            <FontAwesomeIcon icon={faPlay} /> Demo
-          </Card.Link>*/}
         </Card.Body>
+
       </Card>
 
-    </div>
+
   );
 }
 
