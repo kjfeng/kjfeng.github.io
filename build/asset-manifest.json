@@ -1,28 +1,25 @@
 {
   "files": {
     "main.css": "./static/css/main.b936df2c.chunk.css",
-    "main.js": "./static/js/main.f35fee99.chunk.js",
-    "main.js.map": "./static/js/main.f35fee99.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.49bf7416.js",
-    "runtime-main.js.map": "./static/js/runtime-main.49bf7416.js.map",
+    "main.js": "./static/js/main.e18cb6c1.chunk.js",
+    "main.js.map": "./static/js/main.e18cb6c1.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.db506288.js",
+    "runtime-main.js.map": "./static/js/runtime-main.db506288.js.map",
     "static/css/2.f2512455.chunk.css": "./static/css/2.f2512455.chunk.css",
-    "static/js/2.319c8d56.chunk.js": "./static/js/2.319c8d56.chunk.js",
-    "static/js/2.319c8d56.chunk.js.map": "./static/js/2.319c8d56.chunk.js.map",
-    "static/js/3.b082be7d.chunk.js": "./static/js/3.b082be7d.chunk.js",
-    "static/js/3.b082be7d.chunk.js.map": "./static/js/3.b082be7d.chunk.js.map",
+    "static/js/2.db2d5e60.chunk.js": "./static/js/2.db2d5e60.chunk.js",
+    "static/js/2.db2d5e60.chunk.js.map": "./static/js/2.db2d5e60.chunk.js.map",
+    "static/js/3.81789012.chunk.js": "./static/js/3.81789012.chunk.js",
+    "static/js/3.81789012.chunk.js.map": "./static/js/3.81789012.chunk.js.map",
     "index.html": "./index.html",
     "static/css/2.f2512455.chunk.css.map": "./static/css/2.f2512455.chunk.css.map",
     "static/css/main.b936df2c.chunk.css.map": "./static/css/main.b936df2c.chunk.css.map",
-    "static/js/2.319c8d56.chunk.js.LICENSE.txt": "./static/js/2.319c8d56.chunk.js.LICENSE.txt",
-    "static/media/adoculos-cover.png": "./static/media/adoculos-cover.b1631ae8.png",
+    "static/js/2.db2d5e60.chunk.js.LICENSE.txt": "./static/js/2.db2d5e60.chunk.js.LICENSE.txt",
     "static/media/anjali.png": "./static/media/anjali.a9beacb5.png",
     "static/media/anne.png": "./static/media/anne.22cc9b05.png",
-    "static/media/arbb-cover.png": "./static/media/arbb-cover.55aec44c.png",
     "static/media/arblockbot-poster.pdf": "./static/media/arblockbot-poster.5ec82da5.pdf",
     "static/media/arunesh.png": "./static/media/arunesh.77858dea.png",
     "static/media/arvind.png": "./static/media/arvind.03e17232.png",
     "static/media/cv.pdf": "./static/media/cv.c5764173.pdf",
-    "static/media/inter-cover.png": "./static/media/inter-cover.bcca6b1d.png",
     "static/media/kevin-song.png": "./static/media/kevin-song.da04ea1c.png",
     "static/media/kjfeng.png": "./static/media/kjfeng.a324734d.png",
     "static/media/marshini.png": "./static/media/marshini.92994f16.png",
@@ -30,14 +27,13 @@
     "static/media/mirror.png": "./static/media/mirror.eba37eb3.png",
     "static/media/oishee.png": "./static/media/oishee.46ae9275.png",
     "static/media/pton-thesis-slides.pdf": "./static/media/pton-thesis-slides.7342e472.pdf",
-    "static/media/pton-thesis.pdf": "./static/media/pton-thesis.c8d6158b.pdf",
-    "static/media/whatsapp-cover.png": "./static/media/whatsapp-cover.6d1d327a.png"
+    "static/media/pton-thesis.pdf": "./static/media/pton-thesis.c8d6158b.pdf"
   },
   "entrypoints": [
-    "static/js/runtime-main.49bf7416.js",
+    "static/js/runtime-main.db506288.js",
     "static/css/2.f2512455.chunk.css",
-    "static/js/2.319c8d56.chunk.js",
+    "static/js/2.db2d5e60.chunk.js",
     "static/css/main.b936df2c.chunk.css",
-    "static/js/main.f35fee99.chunk.js"
+    "static/js/main.e18cb6c1.chunk.js"
   ]
 }

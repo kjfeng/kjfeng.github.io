@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import './main.css';
 import { Row, Col } from 'react-bootstrap';
-import { Route, NavLink, BrowserRouter, Switch } from 'react-router-dom';
+import { Route, NavLink, BrowserRouter, HashRouter, Switch } from 'react-router-dom';
 import Latest from './Latest';
 import Publications from './Publications';
 import Projects from './Projects';
@@ -17,7 +17,7 @@ import { AdOculos, WhatsappMisinfo, ARBlockbot } from './assets/ProjectPages.js'
 function App() {
   return (
 
-    <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
+    <HashRouter>
       <Switch>
 
         <Route path="/projects/adoculos" component={AdOculos}/>
@@ -79,7 +79,7 @@ function App() {
 
       <Scroller />
 
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

@@ -5,7 +5,7 @@ import { Row, Col, CardGroup, Card } from 'react-bootstrap';
 function Latest() {
   return (
     <div className="showcase-wrapper">
-      <Showcase
+      {/*<Showcase
         thumbnail={ require('./assets/img/adoculos-cover.png').default }
         title="AdOculos"
         subtitle="Lowering the barrier for web advertisement research at scale."
@@ -37,10 +37,10 @@ function Latest() {
         venue="NUS Computing Innovation & Research Showcase 2020"
         urlext="arblockbot"
         poster={ require("./assets/files/arblockbot-poster.pdf").default }
-      />
+      />*/}
 
 
-      {/*<img src={ require('./assets/img/construction.gif').default } style={{maxWidth: 500}}/>*/}
+      <img src={ require('./assets/img/construction.gif').default } style={{maxWidth: 500}}/>
     </div>
   );
 }
