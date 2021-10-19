@@ -2,6 +2,7 @@ import React from 'react';
 import '../main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle, faFileAlt, faCode, faWindowRestore, faPlay, faVideo, faWindowMaximize } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 function Details(props) {
 

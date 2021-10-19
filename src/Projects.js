@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './main.css';
 
 
 function Projects() {
-
+  useEffect(() => {
+    sessionStorage.setItem("onDetailsPage", 0);
+  }, []);
   return (
     /*<p className="">
       <Link to={'/projects/adoculos'}>AdOculos</Link><br/>

@@ -12,12 +12,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faFile, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Details from './assets/Details.js';
-import { AdOculos, WhatsappMisinfo, ARBlockbot } from './assets/ProjectPages.js';
+import { AdOculos, WhatsappMisinfo } from './assets/Projects2021.js';
+import { ARBlockbot } from './assets/Projects2020etc.js';
 
 function App() {
   return (
 
-    <HashRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Switch>
 
         <Route path="/projects/adoculos" component={AdOculos}/>
