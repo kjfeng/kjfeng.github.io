@@ -71,8 +71,6 @@ function App() {
               <Route path="/misc" component={Misc}/>
 
 
-
-
             </Col>
 
         </div>
