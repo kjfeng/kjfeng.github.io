@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from "react-router-dom";
 import './main.css';
 import { Project } from './assets/HelperComponents'
 
@@ -65,7 +64,7 @@ function Projects() {
 
       <br/>
       <div>
-        <img src={ require('./assets/img/construction.gif').default } style={{maxWidth: 500}}/>
+        <img src={ require('./assets/img/construction.gif').default } style={{maxWidth: 500}} alt={""}/>
       </div>
 
     </div>

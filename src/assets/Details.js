@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInfoCircle, faFileAlt, faCode, faWindowRestore, faPlay, faVideo, faWindowMaximize, faBook, faCopy } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { faFileAlt, faCode, faWindowRestore, faPlay, faVideo, faWindowMaximize, faBook, faCopy } from '@fortawesome/free-solid-svg-icons';
 
 function Bib(props) {
   return (
     <div className="bib-block">
         <pre className="bib-pre">{props.bibtex}</pre>
-        <a className="copy-button" onClick={() => navigator.clipboard.writeText(props.bibtex)}><FontAwesomeIcon icon={faCopy} /></a>
+        <button className="copy-button" onClick={() => navigator.clipboard.writeText(props.bibtex)}><FontAwesomeIcon icon={faCopy} /></button>
 
     </div>
   );
@@ -36,7 +35,7 @@ function Details(props) {
 
       {props.poster ? <a href={props.poster} className="showcase-link"><FontAwesomeIcon icon={faWindowMaximize} /> Poster</a> : null}
 
-      {props.bibtex ? <a onClick={toggleBibtex} className="showcase-link"><FontAwesomeIcon icon={faBook} /> BibTeX</a> : null}
+      {props.bibtex ? <button onClick={toggleBibtex} className="showcase-link"><FontAwesomeIcon icon={faBook} /> BibTeX</button> : null}
 
       {showBib ? <Bib bibtex={props.bibtex}/> : null}
 

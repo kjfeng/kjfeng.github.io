@@ -3,16 +3,17 @@ import '../main.css';
 import { Row } from 'react-bootstrap';
 import Details from './Details';
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 export function VimeoEmbed(props) {
   return (
     <div style={{paddingBottom: "1rem"}}>
-      <div style={{padding: "56.25% 0 0 0", position:"relative"}}><iframe src={props.vimeoLink} style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      <div style={{padding: "56.25% 0 0 0", position:"relative"}}><iframe title="Vimeo embed" src={props.vimeoLink} style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     </div>
   );
 }
 
-export function InfoPage(props) {
+export function DetailsPage(props) {
   return (
     <div className="page-template col-sm-12 col-md-10 col-lg-8">{props.children}</div>
   );
@@ -85,4 +86,14 @@ export function autoScroll() {
     window.scrollTo({top: 0, left: 0, behavior: 'instant'});
     sessionStorage.setItem("onDetailsPage", 1);
   }
+}
+
+export function InfoPage(props) {
+  autoScroll();
+  return (
+    <div className="page-template col-sm-12 col-md-10 col-lg-8">
+      <Helmet title={`${props.helmetExt} | Kevin Feng`} />
+      {props.children}
+    </div>
+  );
 }

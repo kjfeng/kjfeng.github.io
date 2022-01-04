@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Showcase from './Showcase.js';
-import { Row, Col, CardGroup, Card } from 'react-bootstrap';
 
 function Latest() {
   useEffect(() => {

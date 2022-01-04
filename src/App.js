@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import './main.css';
 import { Row, Col } from 'react-bootstrap';
-import { Route, NavLink, BrowserRouter, HashRouter, Switch } from 'react-router-dom';
+import { Route, NavLink, HashRouter, Switch } from 'react-router-dom';
 import Latest from './Latest';
 import Publications from './Publications';
 import Projects from './Projects';
@@ -11,7 +11,6 @@ import Scroller from './scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faFile, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import Details from './assets/Details.js';
 import { AdOculos, WhatsappMisinfo } from './assets/Projects2021.js';
 import { ARBlockbot, Rehack, GraphicDesign } from './assets/Projects2020etc.js';
 

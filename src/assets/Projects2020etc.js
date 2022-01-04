@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../main.css';
-import { InfoPage, AuthorPile, autoScroll, Figure, VimeoEmbed } from './HelperComponents';
+import { DetailsPage, AuthorPile, autoScroll, Figure, VimeoEmbed } from './HelperComponents';
 import Details from './Details';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInfoCircle, faFileAlt, faCode, faWindowRestore, faPlay, faVideo, faWindowMaximize } from '@fortawesome/free-solid-svg-icons';
 import * as dataObjects from './dataObjects.js';
 import { Helmet } from 'react-helmet';
 import { Carousel } from 'react-bootstrap';
@@ -13,12 +11,12 @@ export function ARBlockbot() {
   autoScroll();
 
   return (
-    <InfoPage>
+    <DetailsPage>
       <Helmet title={"ARBlockbot | Kevin Feng"} />
 
       <h2>ARBlockbot</h2>
         <AuthorPile authors={dataObjects.ARBlockbotObj.authors}/>
-        <span>* denotes equal contribution</span>
+        <p>* denotes equal contribution</p>
         <p className="venue-page">{dataObjects.ARBlockbotObj.venue}</p>
 
         <Figure path="./img/arbb-cover.png" alt="Two phones side by side showing the ARBlockbot app interface. The left shows an AR robot on a real-world surface and the right shows the block programming menu." />
@@ -35,7 +33,7 @@ export function ARBlockbot() {
         <h3>Details</h3>
         <Details{...dataObjects.ARBlockbotObj}/>
 
-    </InfoPage>
+    </DetailsPage>
   );
 }
 
@@ -43,7 +41,7 @@ export function Rehack() {
   autoScroll();
 
   return (
-    <InfoPage>
+    <DetailsPage>
       <Helmet title={"Rehack | Kevin Feng"} />
 
       <h2>Rehack</h2>
@@ -113,14 +111,14 @@ export function Rehack() {
       <Figure path="./img/rehack-team.jpg" caption="The fantastic team 🚀"/>
 
 
-    </InfoPage>
+    </DetailsPage>
   );
 }
 
 export function GraphicDesign() {
   autoScroll();
   return (
-    <InfoPage>
+    <DetailsPage>
       <Helmet title={"Graphic Design | Kevin Feng"} />
 
       <h2>Various Graphic Design Projects</h2>
@@ -280,6 +278,6 @@ export function GraphicDesign() {
 
 
 
-    </InfoPage>
+    </DetailsPage>
   );
 }
