@@ -23,7 +23,7 @@ function Showcase(props) {
 
             {props.urlext ? <Link to={`/projects/${props.urlext}`} className="showcase-link"><FontAwesomeIcon icon={faInfoCircle} /> Info</Link> : null}
 
-            {props.paper ? <a href={props.paper} className="showcase-link"><FontAwesomeIcon icon={faFileAlt} /> Paper</a> : null}
+            {props.paper ? <a href={props.paper} className="showcase-link"><FontAwesomeIcon icon={faFileAlt} /> PDF</a> : null}
 
             {props.code ? <a href={props.code} className="showcase-link"><FontAwesomeIcon icon={faCode} /> Code</a> : null}
 
