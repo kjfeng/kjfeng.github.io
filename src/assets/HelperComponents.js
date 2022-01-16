@@ -4,6 +4,17 @@ import { Row } from 'react-bootstrap';
 import Details from './Details';
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet';
+import { HashLink } from 'react-router-hash-link';
+
+export function PageHeader() {
+  return (
+    <div className="header-wrapper">
+      <span className="page-header"><a href="/">Kevin Feng</a></span>
+      <span><a className="header-link" href={ require("./files/cv.pdf").default }>CV</a></span>
+      <span><HashLink className="header-link" to={'/projects#nav'}>Projects</HashLink></span>
+    </div>
+  );
+}
 
 export function VimeoEmbed(props) {
   return (
@@ -13,9 +24,13 @@ export function VimeoEmbed(props) {
   );
 }
 
+// deprecated to 2020 projects and older
 export function DetailsPage(props) {
   return (
-    <div className="page-template col-sm-12 col-md-10 col-lg-8">{props.children}</div>
+    <div className="page-template col-sm-12 col-md-10 col-lg-8">
+      <PageHeader />
+      {props.children}
+    </div>
   );
 }
 
@@ -91,9 +106,13 @@ export function autoScroll() {
 export function InfoPage(props) {
   autoScroll();
   return (
-    <div className="page-template col-sm-12 col-md-10 col-lg-8">
-      <Helmet title={`${props.helmetExt} | Kevin Feng`} />
-      {props.children}
+    <div>
+      <div className="page-template col-sm-12 col-md-10 col-lg-8">
+        <Helmet title={`${props.helmetExt} | Kevin Feng`} />
+        <PageHeader />
+        {props.children}
+      </div>
     </div>
+
   );
 }

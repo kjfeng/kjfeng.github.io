@@ -57,6 +57,11 @@ function Projects() {
         year="2019"
       />
       <Project
+        name="Audioscape"
+        urlext="audioscape"
+        year="2019"
+      />
+      <Project
         name="Social Login Visualizer"
         weblink="https://egr277.github.io/social-login-visualizer/"
         year="2019"

@@ -11,8 +11,9 @@ import Scroller from './scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faFile, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import Details from './assets/Details.js';
 import { AdOculos, WhatsappMisinfo } from './assets/Projects2021.js';
-import { ARBlockbot, Rehack, GraphicDesign } from './assets/Projects2020etc.js';
+import { ARBlockbot, Rehack, GraphicDesign, Audioscape } from './assets/Projects2020etc.js';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           }}/>
         <Route path="/projects/rehack" component={Rehack}/>
         <Route path="/projects/graphic-design" component={GraphicDesign}/>
+        <Route path="/projects/audioscape" component={Audioscape}/>
 
         <div className="App">
           <Col md={12} lg={10}>
@@ -57,7 +59,7 @@ function App() {
               </Col>
             </Row>
 
-              <div className="nav-wrapper">
+              <div className="nav-wrapper" id="nav">
                 <NavLink to="/" exact={true} className="navigator">Latest</NavLink>
                 <NavLink to="/publications" className="navigator">Publications</NavLink>
                 <NavLink to="/projects" className="navigator">Projects</NavLink>

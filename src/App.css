@@ -3,6 +3,10 @@
   font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
+.page-template {
+  margin-top: 0;
+}
+
 
 /* tablet */
 /* @media only screen and (max-width: 768px) {

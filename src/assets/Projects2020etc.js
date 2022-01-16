@@ -281,3 +281,42 @@ export function GraphicDesign() {
     </DetailsPage>
   );
 }
+
+export function Audioscape() {
+  autoScroll();
+
+  return (
+    <DetailsPage>
+      <Helmet title={"Audioscape | Kevin Feng"} />
+
+      <h2>Audioscape</h2>
+        <p className="venue-page">Interactive ThreeJS Audio Visualizer</p>
+
+        <Figure path="./img/as-cover.png" alt="A sweeping view of some tall gray buildings against a light blue sky and light fog on the horizon." />
+
+        <h3>Introduction</h3>
+        <p>Procedural generation has been widely used in the fields of game design—developers use this technique to algorithmically create digital assets (3D models, textures, etc.) at large scales while leveraging some computer-generated randomness for more natural scenes. Audioscape uses procedural generation to generate an explorable 3D landscape upon accepting an audio file and alters the landscape based on the audio content. The user has first person controls to "fly" around the scene as it changes. This is an attempt to add a layer of interactivity absent from many other audio visualizers at the time. </p>
+
+        <h3>Scene Generation</h3>
+        <p>Our main set of scenes was a cityscape at different times of the day. We used 10,000 unit boxes for buildings and randomly added them to the ground plane, saving each building in a way that can be quickly re-accessed for vertex distortion upon audio input. To texture the buildings, we used a Lambert Material (which uses Gouraud shading). Phong Material actually has better reflection capabilities, which would be especially appealing in our night scene, but Lambert was more efficient for a large number of objects. A special unindended effect of starting the buildings as unit boxes is that they will pop up energetically once the first notes hit.</p>
+
+        <p>The city scene was refined by adding constants that dictated the number of city blocks, width of each block, and size + number of street lamps on the sidewalk. The shade of gray on building was also varied randomly.  The lights on the street lamps were generated separately  from its pole and base so that we could alter the colour based on audio at night.</p>
+
+        <h3>Audio</h3>
+        <p>The UI accepts an audio file to analyze and play back. Byte frequency analysis was done using JavaScript's Web Audio API and amplitude analysis was done using p5.js. Upon receiving the byte frequency data, we took a simple approach to estimating treble and bass by splitting the frequencies in two. It was important that this analysis was computationally simple to reduce lag while simultaneously rendering large amounts of geometries and textures. We then took the average of the frequencies in the top and bottom halves, modulated them, and combined them with amplitude data. We used these values to act as parameters in vertex displacement of geometries and pseudo-random colour generation. </p>
+
+        <h3>Pictures</h3>
+        <Figure path="./img/as-1.png" />
+        <Figure path="./img/as-2.png" />
+        <Figure path="./img/as-3.png" />
+        <Figure path="./img/as-4.png" />
+        <Figure path="./img/as-5.png" />
+
+
+        <h3>Details</h3>
+        <p>This project was done in collaboration with <a href="https://github.com/dalejlee">Dale Lee</a>.</p>
+        <Details code="https://github.com/kjfeng/audioscape" demo="https://audioscape-demo.github.io/audioscape/"/>
+
+    </DetailsPage>
+  );
+}
