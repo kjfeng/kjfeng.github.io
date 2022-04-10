@@ -1,5 +1,5 @@
 export let WhatsappMisinfoObj = {
-  title: "Investigating How Users in the United States Encounter and Deal With Misinformation on WhatsApp During COVID-19",
+  title: "Investigating How University Students in the United States Encounter and Deal With Misinformation in Private WhatsApp Chats During COVID-19",
   authors: [
       ["Oishee Chakrabarti*", require('./img/people/oishee.png')],
       [<span><u>K. J. Kevin Feng</u>*</span>, require('./img/people/kjfeng.png')],
