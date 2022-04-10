@@ -32,7 +32,7 @@ export function WhatsappMisinfo() {
   return (
     <InfoPage helmetExt="Misinformation on WhatsApp">
 
-      <h2>Investigating How Users in the United States Encounter and Deal With Misinformation on WhatsApp During COVID-19</h2>
+      <h2>{dataObjects.WhatsappMisinfoObj.title}</h2>
       <AuthorPile authors={dataObjects.WhatsappMisinfoObj.authors}/>
       <p>* denotes equal contribution</p>
       <p className="venue-page">{dataObjects.WhatsappMisinfoObj.venue}</p>

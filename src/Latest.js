@@ -21,7 +21,7 @@ function Latest() {
       <Showcase
         thumbnail={ require('./assets/img/whatsapp-cover.png').default }
         title="Misinformation on WhatsApp"
-        subtitle="Investigating how users in the United States encounter and deal with misinformation on WhatsApp during COVID-19."
+        subtitle="Investigating How University Students in the United States Encounter and Deal With Misinformation in Private WhatsApp Chats During COVID-19."
         venue="In submission"
         urlext="whatsapp-misinfo"
       />
