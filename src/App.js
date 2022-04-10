@@ -50,7 +50,7 @@ function App() {
                   <span><a href="https://twitter.com/kjfeng_"><FontAwesomeIcon icon={faTwitter} /> @kjfeng_</a></span>
                 </div>
 
-              </Col>
+              </Col> 
 
               <Col xs={{span:12, order:1}} md={{span:8, order:2}} className="bio-wrapper">
                 <p>I'm a first-year PhD student in the <a href="https://www.hcde.washington.edu/">Human Centered Design & Engineering</a> department at the University of Washington, currently rotating with <a href="https://faculty.washington.edu/aragon/">Cecilia Aragon</a>. My interests are in human-AI interaction and collaboration, specifically the intersection of user experience and machine learning. I’m motivated by the observation that there is increasing need to collaboratively advance the UX of ML systems as they are deployed into new domains, but key stakeholders are unprepared to do so with current tools and processes. </p>
