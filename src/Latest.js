@@ -42,7 +42,6 @@ function Latest() {
         poster={ require("./assets/files/arblockbot-poster.pdf").default }
       />
 
-
       {/*<img src={ require('./assets/img/construction.gif').default } style={{maxWidth: 500}}/>*/}
     </div>
   );
