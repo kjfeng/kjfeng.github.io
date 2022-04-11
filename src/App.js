@@ -66,7 +66,6 @@ function App() {
                 <NavLink to="/misc" className="navigator">Misc</NavLink>
               </div>
 
-
               <Route exact path="/" component={Latest}/>
               <Route path="/publications" component={Publications}/>
               <Route path="/projects" component={Projects}/>
