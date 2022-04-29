@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.342ac2f4.chunk.css",
-    "main.js": "/static/js/main.9942e08b.chunk.js",
-    "main.js.map": "/static/js/main.9942e08b.chunk.js.map",
+    "main.js": "/static/js/main.609fce00.chunk.js",
+    "main.js.map": "/static/js/main.609fce00.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.12a4bb06.js",
     "runtime-main.js.map": "/static/js/runtime-main.12a4bb06.js.map",
     "static/css/2.f2512455.chunk.css": "/static/css/2.f2512455.chunk.css",
@@ -41,7 +41,7 @@
     "static/media/incontext-slides.pdf": "/static/media/incontext-slides.42f74ea8.pdf",
     "static/media/inter-cover.png": "/static/media/inter-cover.bcca6b1d.png",
     "static/media/kevin-song.png": "/static/media/kevin-song.da04ea1c.png",
-    "static/media/kjfeng-incontext-chi22.pdf": "/static/media/kjfeng-incontext-chi22.da561f6a.pdf",
+    "static/media/kjfeng-incontext-chi22.pdf": "/static/media/kjfeng-incontext-chi22.120e279d.pdf",
     "static/media/kjfeng.png": "/static/media/kjfeng.a324734d.png",
     "static/media/marshini.png": "/static/media/marshini.92994f16.png",
     "static/media/materialize-0.jpg": "/static/media/materialize-0.8b3c0998.jpg",
@@ -93,6 +93,6 @@
     "static/css/2.f2512455.chunk.css",
     "static/js/2.cc3ddef8.chunk.js",
     "static/css/main.342ac2f4.chunk.css",
-    "static/js/main.9942e08b.chunk.js"
+    "static/js/main.609fce00.chunk.js"
   ]
 }
