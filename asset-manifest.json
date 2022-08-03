@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.542c2c29.chunk.css",
-    "main.js": "/static/js/main.bde2539c.chunk.js",
-    "main.js.map": "/static/js/main.bde2539c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.12a4bb06.js",
-    "runtime-main.js.map": "/static/js/runtime-main.12a4bb06.js.map",
+    "main.js": "/static/js/main.d16594ce.chunk.js",
+    "main.js.map": "/static/js/main.d16594ce.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c5e79992.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c5e79992.js.map",
     "static/css/2.f2512455.chunk.css": "/static/css/2.f2512455.chunk.css",
-    "static/js/2.ab7f63e6.chunk.js": "/static/js/2.ab7f63e6.chunk.js",
-    "static/js/2.ab7f63e6.chunk.js.map": "/static/js/2.ab7f63e6.chunk.js.map",
-    "static/js/3.415824ae.chunk.js": "/static/js/3.415824ae.chunk.js",
-    "static/js/3.415824ae.chunk.js.map": "/static/js/3.415824ae.chunk.js.map",
+    "static/js/2.5790ce21.chunk.js": "/static/js/2.5790ce21.chunk.js",
+    "static/js/2.5790ce21.chunk.js.map": "/static/js/2.5790ce21.chunk.js.map",
+    "static/js/3.83641f9b.chunk.js": "/static/js/3.83641f9b.chunk.js",
+    "static/js/3.83641f9b.chunk.js.map": "/static/js/3.83641f9b.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.f2512455.chunk.css.map": "/static/css/2.f2512455.chunk.css.map",
     "static/css/main.542c2c29.chunk.css.map": "/static/css/main.542c2c29.chunk.css.map",
-    "static/js/2.ab7f63e6.chunk.js.LICENSE.txt": "/static/js/2.ab7f63e6.chunk.js.LICENSE.txt",
+    "static/js/2.5790ce21.chunk.js.LICENSE.txt": "/static/js/2.5790ce21.chunk.js.LICENSE.txt",
     "static/media/adoculos-cover.png": "/static/media/adoculos-cover.b1631ae8.png",
     "static/media/album-0.jpg": "/static/media/album-0.e6bc5052.jpg",
     "static/media/album-1.jpg": "/static/media/album-1.32cffb17.jpg",
@@ -37,6 +37,7 @@
     "static/media/cf-cover.png": "/static/media/cf-cover.087f7b12.png",
     "static/media/chirag.png": "/static/media/chirag.d57dfc94.png",
     "static/media/cv.pdf": "/static/media/cv.25c69066.pdf",
+    "static/media/facct22-cfactuals.pdf": "/static/media/facct22-cfactuals.610e19e8.pdf",
     "static/media/incontext-cover.png": "/static/media/incontext-cover.aa679956.png",
     "static/media/incontext-slides.pdf": "/static/media/incontext-slides.42f74ea8.pdf",
     "static/media/inter-cover.png": "/static/media/inter-cover.bcca6b1d.png",
@@ -86,13 +87,14 @@
     "static/media/rehack-8.png": "/static/media/rehack-8.3f030ecc.png",
     "static/media/rehack-cover.png": "/static/media/rehack-cover.5cfe3cc7.png",
     "static/media/rehack-team.jpg": "/static/media/rehack-team.94535334.jpg",
+    "static/media/soups22-whatsapp.pdf": "/static/media/soups22-whatsapp.dc04bc12.pdf",
     "static/media/whatsapp-cover.png": "/static/media/whatsapp-cover.6d1d327a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.12a4bb06.js",
+    "static/js/runtime-main.c5e79992.js",
     "static/css/2.f2512455.chunk.css",
-    "static/js/2.ab7f63e6.chunk.js",
+    "static/js/2.5790ce21.chunk.js",
     "static/css/main.542c2c29.chunk.css",
-    "static/js/main.bde2539c.chunk.js"
+    "static/js/main.d16594ce.chunk.js"
   ]
 }
