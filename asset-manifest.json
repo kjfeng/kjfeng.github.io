@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.08394c6f.chunk.css",
-    "main.js": "/static/js/main.453673fa.chunk.js",
-    "main.js.map": "/static/js/main.453673fa.chunk.js.map",
+    "main.js": "/static/js/main.cd901fda.chunk.js",
+    "main.js.map": "/static/js/main.cd901fda.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.57fea73a.js",
     "runtime-main.js.map": "/static/js/runtime-main.57fea73a.js.map",
     "static/css/2.f2512455.chunk.css": "/static/css/2.f2512455.chunk.css",
@@ -36,7 +36,7 @@
     "static/media/axz.png": "/static/media/axz.57bf2679.png",
     "static/media/cf-cover.png": "/static/media/cf-cover.087f7b12.png",
     "static/media/chirag.png": "/static/media/chirag.d57dfc94.png",
-    "static/media/cv.pdf": "/static/media/cv.25c69066.pdf",
+    "static/media/cv.pdf": "/static/media/cv.07edf637.pdf",
     "static/media/facct22-cfactuals.pdf": "/static/media/facct22-cfactuals.610e19e8.pdf",
     "static/media/facct22-slides.pdf": "/static/media/facct22-slides.7dccaab1.pdf",
     "static/media/incontext-cover.png": "/static/media/incontext-cover.aa679956.png",
@@ -96,6 +96,6 @@
     "static/css/2.f2512455.chunk.css",
     "static/js/2.8fa821d3.chunk.js",
     "static/css/main.08394c6f.chunk.css",
-    "static/js/main.453673fa.chunk.js"
+    "static/js/main.cd901fda.chunk.js"
   ]
 }
