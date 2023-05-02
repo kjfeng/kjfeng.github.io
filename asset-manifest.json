@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.2e0b40b3.chunk.css",
-    "main.js": "/static/js/main.df61326a.chunk.js",
-    "main.js.map": "/static/js/main.df61326a.chunk.js.map",
+    "main.js": "/static/js/main.fe1f607d.chunk.js",
+    "main.js.map": "/static/js/main.fe1f607d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f72ff47c.js",
     "runtime-main.js.map": "/static/js/runtime-main.f72ff47c.js.map",
     "static/css/2.f2512455.chunk.css": "/static/css/2.f2512455.chunk.css",
@@ -41,7 +41,7 @@
     "static/media/cf-cover.png": "/static/media/cf-cover.087f7b12.png",
     "static/media/chi23-584-f.pdf": "/static/media/chi23-584-f.ab2fda07.pdf",
     "static/media/chirag.png": "/static/media/chirag.d57dfc94.png",
-    "static/media/cv.pdf": "/static/media/cv.60cee6ec.pdf",
+    "static/media/cv.pdf": "/static/media/cv.03fb093b.pdf",
     "static/media/dwmc.png": "/static/media/dwmc.e73715f9.png",
     "static/media/facct22-cfactuals.pdf": "/static/media/facct22-cfactuals.610e19e8.pdf",
     "static/media/facct22-slides.pdf": "/static/media/facct22-slides.7dccaab1.pdf",
@@ -118,6 +118,6 @@
     "static/css/2.f2512455.chunk.css",
     "static/js/2.8c516e53.chunk.js",
     "static/css/main.2e0b40b3.chunk.css",
-    "static/js/main.df61326a.chunk.js"
+    "static/js/main.fe1f607d.chunk.js"
   ]
 }
