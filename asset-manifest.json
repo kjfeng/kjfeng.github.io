@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.2e0b40b3.chunk.css",
-    "main.js": "/static/js/main.8349c7f4.chunk.js",
-    "main.js.map": "/static/js/main.8349c7f4.chunk.js.map",
+    "main.js": "/static/js/main.fc259e54.chunk.js",
+    "main.js.map": "/static/js/main.fc259e54.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d4583a97.js",
     "runtime-main.js.map": "/static/js/runtime-main.d4583a97.js.map",
     "static/css/2.c0897e43.chunk.css": "/static/css/2.c0897e43.chunk.css",
@@ -44,7 +44,7 @@
     "static/media/chi2023-slides.pdf": "/static/media/chi2023-slides.574a5f35.pdf",
     "static/media/chi23-584-f.pdf": "/static/media/chi23-584-f.ab2fda07.pdf",
     "static/media/chirag.png": "/static/media/chirag.d57dfc94.png",
-    "static/media/cv.pdf": "/static/media/cv.d582afd9.pdf",
+    "static/media/cv.pdf": "/static/media/cv.3301c7fb.pdf",
     "static/media/dis2023-slides.pdf": "/static/media/dis2023-slides.4afb4dc6.pdf",
     "static/media/dis23-f.pdf": "/static/media/dis23-f.29173295.pdf",
     "static/media/dwmc.png": "/static/media/dwmc.e73715f9.png",
@@ -128,6 +128,6 @@
     "static/css/2.c0897e43.chunk.css",
     "static/js/2.d2c2ee88.chunk.js",
     "static/css/main.2e0b40b3.chunk.css",
-    "static/js/main.8349c7f4.chunk.js"
+    "static/js/main.fc259e54.chunk.js"
   ]
 }
