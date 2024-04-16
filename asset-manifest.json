@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.2e0b40b3.chunk.css",
-    "main.js": "/static/js/main.849428ff.chunk.js",
-    "main.js.map": "/static/js/main.849428ff.chunk.js.map",
+    "main.js": "/static/js/main.106e2918.chunk.js",
+    "main.js.map": "/static/js/main.106e2918.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2bbbece8.js",
     "runtime-main.js.map": "/static/js/runtime-main.2bbbece8.js.map",
     "static/css/2.c0897e43.chunk.css": "/static/css/2.c0897e43.chunk.css",
@@ -49,7 +49,7 @@
     "static/media/chirag.png": "/static/media/chirag.d57dfc94.png",
     "static/media/cqz.png": "/static/media/cqz.9be08975.png",
     "static/media/cscw2023-slides.pdf": "/static/media/cscw2023-slides.37097e85.pdf",
-    "static/media/cv.pdf": "/static/media/cv.eb945339.pdf",
+    "static/media/cv.pdf": "/static/media/cv.52d03085.pdf",
     "static/media/dis2023-slides.pdf": "/static/media/dis2023-slides.4afb4dc6.pdf",
     "static/media/dis23-f.pdf": "/static/media/dis23-f.29173295.pdf",
     "static/media/dwmc.png": "/static/media/dwmc.e73715f9.png",
@@ -142,6 +142,6 @@
     "static/css/2.c0897e43.chunk.css",
     "static/js/2.34119fb2.chunk.js",
     "static/css/main.2e0b40b3.chunk.css",
-    "static/js/main.849428ff.chunk.js"
+    "static/js/main.106e2918.chunk.js"
   ]
 }
