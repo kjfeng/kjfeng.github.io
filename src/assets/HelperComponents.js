@@ -72,7 +72,7 @@ export function Pub(props) {
   }
 
   return (
-    <div style={{marginBottom: ".75rem"}}>
+    <div style={{marginBottom: "1rem"}}>
       <strong>{props.title}</strong><br/>
       <span>{authorFormatter(props.authors)}</span><br/>
       <i>{props.venue}</i>

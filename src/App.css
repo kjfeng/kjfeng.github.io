@@ -18,6 +18,6 @@
 /* mobile  */
 @media only screen and (max-width: 576px) {
   .App, .page-template {
-    margin: 0.5rem;
+    margin: 0;
   }
 }

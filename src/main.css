@@ -32,6 +32,17 @@ h3 {
 
 h5 {
   font-size: 24px !important;
+  margin-bottom: .5rem !important;
+}
+
+.mainCol {
+  max-width: 1000px;
+}
+
+.indexer {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 0;
 }
 
 .header-wrapper {
@@ -58,7 +69,11 @@ h5 {
   margin-right: 2rem;
 }
 
-
+blockquote {
+  font-style: italic;
+  border-left: 3px solid #CCC;
+  padding-left: 1rem;
+}
 
 p {
   color: #333;
@@ -98,7 +113,7 @@ button:focus {
 
 .links-wrapper img {
   width: 100%;
-  padding-bottom: 1rem;
+  padding-bottom: 0;
 }
 
 .bio-wrapper {
@@ -131,7 +146,7 @@ button:focus {
 }
 
 .showcase {
-  width: 20rem;
+  width: 16rem;
   margin-right: 1rem;
   margin-bottom: 1rem !important;
 }
@@ -168,6 +183,7 @@ button:focus {
   font-family: 'Roboto Mono', monospace;
   margin-right: 1rem;
   display: inline-block;
+  padding: 0;
 }
 
 .card-group {
@@ -191,8 +207,8 @@ button:focus {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  display:inline-block;
-  vertical-align:middle;
+  display: inline-block;
+  vertical-align: middle;
   margin-right: 1rem;
 }
 
@@ -215,6 +231,24 @@ button:focus {
   background-color: #eee;
   margin-top: 1rem;
   position: relative;
+  border-left: 3px solid #aaa;
+}
+
+.links-block {
+  background-color: #eee;
+  border-left: 3px solid #aaa;
+  overflow: wrap;
+  padding: 1rem 0 1rem 0;
+  font-size: 0.85rem;
+}
+
+.icon-wrapper {
+  width: 50px;
+}
+
+.bio-icon {
+  display: table;
+  margin: 0 auto;
 }
 
 .copy-button {
@@ -276,4 +310,11 @@ figcaption {
     margin-right: 0
   }
 
+  body {
+    padding: 0;
+  }
+
+  h1, h1 a {
+    font-size: 48px;
+  }
 }

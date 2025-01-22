@@ -177,7 +177,7 @@ export function GraphicDesign() {
 
 
         <h3>Interstellar Plaque (2019)</h3>
-        <p>Redesigning the <a href="https://solarsystem.nasa.gov/resources/706/pioneer-plaque/">Pioneer 10 and 11 plaque</a> for expressive extraterrestrial communication. The final product was laser printed on acrylic.</p>
+        <p>Redesigning the <a href="https://solarsystem.nasa.gov/resources/706/pioneer-plaque/">Pioneer 10 and 11 plaque</a> for expressive extraterrestrial communication. The final product was laser printed on acrylic. More details are in this <a href="https://medium.com/kevin-feng-blog/redesigning-the-pioneer-plaque-e588c5e30984">Medium article.</a></p>
 
         <Carousel>
           <Carousel.Item>

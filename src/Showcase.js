@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInfoCircle, faFileAlt, faCode, faWindowRestore, faPlay, faVideo, faWindowMaximize } from '@fortawesome/free-solid-svg-icons';
+import { faInfoCircle, faFileAlt, faCode, faWindowRestore, faPlay, faVideo, faWindowMaximize, faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 
 function Showcase(props) {
@@ -32,6 +32,8 @@ function Showcase(props) {
             {props.demo ? <a href={props.demo} className="showcase-link"><FontAwesomeIcon icon={faPlay} /> Demo</a> : null}
 
             {props.video ? <a href={props.video} className="showcase-link"><FontAwesomeIcon icon={faVideo} /> Video</a> : null}
+
+            {props.doi ? <a href={props.doi} className="showcase-link"><FontAwesomeIcon icon={faBookmark} /> DOI</a> : null}
 
             {props.poster ? <a href={props.poster} className="showcase-link"><FontAwesomeIcon icon={faWindowMaximize} /> Poster</a> : null}
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileAlt, faCode, faWindowRestore, faPlay, faVideo, faWindowMaximize, faBook, faCopy } from '@fortawesome/free-solid-svg-icons';
+import { faFileAlt, faCode, faWindowRestore, faPlay, faVideo, faWindowMaximize, faBook, faCopy, faBookmark } from '@fortawesome/free-solid-svg-icons';
 
 function Bib(props) {
   return (
@@ -34,6 +34,8 @@ function Details(props) {
       {props.video ? <a href={props.video} className="showcase-link"><FontAwesomeIcon icon={faVideo} /> Video</a> : null}
 
       {props.poster ? <a href={props.poster} className="showcase-link"><FontAwesomeIcon icon={faWindowMaximize} /> Poster</a> : null}
+
+      {props.doi ? <a href={props.doi} className="showcase-link"><FontAwesomeIcon icon={faBookmark} /> DOI</a> : null}
 
       {props.bibtex ? <button onClick={toggleBibtex} className="showcase-link"><FontAwesomeIcon icon={faBook} /> BibTeX</button> : null}
 
