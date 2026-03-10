@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.2e0b40b3.chunk.css",
-    "main.js": "/static/js/main.efbc26fd.chunk.js",
-    "main.js.map": "/static/js/main.efbc26fd.chunk.js.map",
+    "main.js": "/static/js/main.dde09709.chunk.js",
+    "main.js.map": "/static/js/main.dde09709.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.98f7802e.js",
     "runtime-main.js.map": "/static/js/runtime-main.98f7802e.js.map",
     "static/css/2.c0897e43.chunk.css": "/static/css/2.c0897e43.chunk.css",
@@ -52,7 +52,7 @@
     "static/media/cocoa-cover.png": "/static/media/cocoa-cover.ddb79f56.png",
     "static/media/cqz.png": "/static/media/cqz.9be08975.png",
     "static/media/cscw2023-slides.pdf": "/static/media/cscw2023-slides.37097e85.pdf",
-    "static/media/cv.pdf": "/static/media/cv.8c47d2a2.pdf",
+    "static/media/cv.pdf": "/static/media/cv.3225a032.pdf",
     "static/media/dan.png": "/static/media/dan.c0d570c0.png",
     "static/media/dis2023-slides.pdf": "/static/media/dis2023-slides.4afb4dc6.pdf",
     "static/media/dis23-f.pdf": "/static/media/dis23-f.29173295.pdf",
@@ -158,6 +158,6 @@
     "static/css/2.c0897e43.chunk.css",
     "static/js/2.1226d9e8.chunk.js",
     "static/css/main.2e0b40b3.chunk.css",
-    "static/js/main.efbc26fd.chunk.js"
+    "static/js/main.dde09709.chunk.js"
   ]
 }
