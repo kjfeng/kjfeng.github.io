@@ -4,7 +4,7 @@ slug: "industry-job-search"
 ---
 
 # Industry job search retrospective
-October 2026
+October 26, 2026
 
 Jump to [Concrete Advice](#concrete-advice) for a TLDR.
 
@@ -109,6 +109,8 @@ Given the frontier labs’ big push to automate AI research, I expect the next A
 - [Blind 75](https://neetcode.io/practice/practice/blind75) / [Neetcode 150](https://neetcode.io/practice/practice/neetcode150) for general coding
 - [DeepML](https://www.deep-ml.com/problems) for ML coding 
 - [ML fundamentals flashcards app](https://github.com/kjfeng/ml-prep-app)
+
+Thanks to Sherry Ruan for feedback on a draft.
 
 [^conventional-ai-research]: By this, I mean that AI was not my home academic community: my main conferences were not NeurIPS, ICML, ICLR, CVPR, etc.
 
