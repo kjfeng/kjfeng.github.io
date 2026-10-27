@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Sans Times Sans 24";
+  src: url("../fonts/SansTimesSans@24R.ttf") format("truetype");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "Sans Times Sans 16";
+  src: url("../fonts/SansTimesSans@16R.ttf") format("truetype");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "Sans Times Sans 32";
+  src: url("../fonts/SansTimesSans@32R.ttf") format("truetype");
+  /* font-display: swap; */
+}
+
+body,
+.font-body {
+  font-family: "Sans Times Sans 24", sans-serif;
+}
+
+.font-mono, .font-16 {
+  font-family: "Sans Times Sans 16", sans-serif;
+}
+
+.font-bibtex {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.font-heading {
+  font-family: "Sans Times Sans 32", sans-serif;
+}
+
+a,
+a * {
+  color: #2563eb !important;
+}
+
+html,
+body,
+body * {
+  cursor: url("../img/cursor.png") 8 8, auto !important;
+}
+
+a:hover,
+a:hover *,
+button:hover,
+button:hover * {
+  cursor: url("../img/cursor-pointer.png") 8 0, pointer !important;
+  color: #ed6300 !important;
+}
+
+a:active,
+a:active *,
+button:active,
+button:active * {
+  color: #ed6300 !important;
+}
+
+html.pointer-down,
+html.pointer-down * {
+  cursor: url("../img/cursor-half.png") 8 8, auto !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+:where(.section-title) {
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#updates-list > [hidden] {
+  display: none !important;
+}
+

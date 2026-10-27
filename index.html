@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kevin Feng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="scripts/script.js"></script>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="bg-white font-body text-black antialiased">
+  <main class="mx-auto max-w-3xl px-6 py-12 sm:py-16 lg:flex lg:items-start lg:max-w-6xl lg:justify-center lg:gap-16">
+    <header class="mb-10 block sm:flex sm:items-start sm:gap-6 lg:sticky lg:top-16 lg:mb-0 lg:block lg:w-64 lg:shrink-0 lg:self-start">
+
+      <div class="group relative mb-6 flex h-24 w-24 flex-none items-center justify-center sm:mb-0 lg:mb-6 h-36 w-36 lg:h-48 lg:w-48">
+        <img
+          src="img/kjfeng.png"
+          alt="An Asian man in a cap and glasses grinning."
+          class="block h-full w-full rounded object-cover"
+        />
+
+        <img
+          src="img/nom.png"
+          alt="An Asian man in a bucket hat and glasses about to eat a large stroopwafel."
+          class="absolute inset-0 h-full w-full rounded object-cover opacity-0 transition-opacity group-hover:opacity-100"
+        />
+      </div>
+
+      <div>
+        <h1 class="m-0 mb-2 font-heading text-4xl">
+          Kevin Feng
+        </h1>
+
+        <p class="m-0 mb-2 text-lg lg:max-w-xs">
+          Scientist @ Microsoft
+        </p>
+
+        <p class="m-0 mb-3 font-mono text-sm">📍 Bay Area, CA</p>
+
+        <nav class="flex flex-wrap gap-x-3 font-mono leading-loose text-sm text-black lg:block" aria-label="Profiles">
+          <a href="./docs/cv.pdf" class="lg:block lg:w-fit lg:whitespace-nowrap">CV</a>
+          <a href="https://scholar.google.com/citations?user=CNrJuz8AAAAJ&hl=en" class="lg:block lg:w-fit lg:whitespace-nowrap">Google Scholar</a>
+          <a href="https://www.linkedin.com/in/kevin-kj-feng/" class="lg:block lg:w-fit lg:whitespace-nowrap">LinkedIn</a>
+          <a href="https://github.com/kjfeng" class="lg:block lg:w-fit lg:whitespace-nowrap">GitHub</a>
+          <a href="https://x.com/kjfeng_" class="lg:block lg:w-fit lg:whitespace-nowrap">Twitter (X)</a>
+          <button type="button" class="cursor-pointer border-0 bg-transparent p-0 font-mono text-sm text-accent lg:block lg:w-fit lg:whitespace-nowrap" data-email-reveal data-email="kjfeng at uw dot edu" aria-live="polite">Email</button>
+          <a href="#blog" class="lg:block lg:w-fit lg:whitespace-nowrap">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="min-w-0 flex-1 lg:max-w-2xl">
+      <section class="text-lg mb-8">
+        <div class="space-y-4">
+          <p>
+            I'm a researcher interested in how we can diffuse AI fruitfully and safely throughout society. My work spans human-AI interaction, agentic systems, evaluation, and alignment. I'm currently a Senior Applied Scientist at Microsoft, where I work on evaluation science and AI deployment in enterprises. 
+          </p>
+
+          <p>
+            I received my PhD in <a href="https://www.hcde.washington.edu/">Human Centered Design & Engineering</a> at the University of Washington, where I was fortunate to be advised by <a href="https://www.hcde.washington.edu/mcdonald">David W. McDonald</a> and <a href="https://homes.cs.washington.edu/~axz/">Amy X. Zhang</a>. During my PhD, I interned at <a href="https://research.google/">Google Research</a>, <a href="https://allenai.org/">Ai2</a>, and <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, and collaborated with <a href="https://www.aisi.gov.uk/">UK AISI</a> and <a href="https://www.governance.ai/">GovAI</a>. My research has been recognized with a <a href="https://new.expo.uw.edu/expo/scholarships/herbold">UW Herbold Fellowship</a> (2022), an <a href="https://openai.com/index/democratic-inputs-to-ai/">OpenAI Democratic Inputs to AI grant</a> (2023), a CHI Best Paper Award (2026), and orals at NeurIPS and ICLR workshops. Before UW, I received my BSE in Computer Science and a minor in Visual Arts from Princeton University, where I was fortunate to be advised by <a href="https://www.cs.princeton.edu/~arvindn/">Arvind Narayanan</a>.
+          </p>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <div data-include="publications.html"></div>
+
+      <hr>
+
+      <div data-include="updates.html"></div>
+
+      <hr>
+
+      <div data-include="blog.html"></div>
+
+      <hr>
+
+       <section id="misc" class="mt-8">
+        <div class="section-title">
+          <h2 class="font-heading text-3xl">Misc</h2>
+        </div>
+
+        <p>Here's some <a href="https://kjfeng-photo.mystrikingly.com/">photography</a> and <a href="https://kjfeng-cbp.mystrikingly.com/">Chinese brush painting</a> I've done in the past.</p>
+
+      </section>
+
+      <footer id="contact" class="mt-16 border-t border-black/15 pt-5 font-mono text-sm">
+        <p>Last updated: October 2026.</p>
+        <a href="/blog/sans-times-sans.html">What's this font?</a>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>

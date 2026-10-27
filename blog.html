@@ -1,0 +1,18 @@
+---
+permalink: /blog.html
+---
+       <section id="blog" class="my-8">
+        <div class="section-title">
+          <h2 class="font-heading text-3xl">Blog</h2>
+        </div>
+
+        <dl class="space-y-2">
+          {% for post in site.posts %}
+          <div class="flex gap-5">
+            <dt class="w-16 shrink-0 pt-1 text-left font-mono text-xs">{{ post.date | date: "%b %Y" }}</dt>
+            <dd><a href="{{ post.url | remove_first: '/' }}">{{ post.title }}</a></dd>
+          </div>
+          {% endfor %}
+        </dl>
+
+      </section>

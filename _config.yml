@@ -1,0 +1,23 @@
+markdown: kramdown
+
+kramdown:
+  input: GFM
+
+permalink: /blog/:title.html
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: blog
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - config/
