@@ -10,7 +10,7 @@ May 3, 2021
 
 ## Introduction
 
-In his 1923 essay *The New Typography*, graphic designer and Bauhaus pioneer László Moholy-Nagy opened with the following:
+In his 1923 essay *The New Typography*, graphic designer and Bauhaus pioneer Laszlo Moholy-Nagy opened with the following:
 
 > Typography is a tool of communication. It must be communication in its most intense form. The emphasis must be on absolute clarity since this distinguishes the character of our own writing from that of ancient pictographic forms. 
 
