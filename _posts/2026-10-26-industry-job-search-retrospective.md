@@ -3,7 +3,7 @@ title: "Industry Job Search Retrospective"
 slug: "industry-job-search"
 ---
 
-# Industry job search retrospective
+# Industry Job Search Retrospective
 October 26, 2026
 
 Jump to [Concrete Advice](#concrete-advice) for a TLDR.
